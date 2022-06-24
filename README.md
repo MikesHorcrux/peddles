@@ -26,7 +26,7 @@ Please adhere to this project's `code of conduct`.
 
 ## Support
 
-For support, email fake@fake.com or join our Slack channel.
+For support, email mike@justbearded.com 
 
 
 ## License
