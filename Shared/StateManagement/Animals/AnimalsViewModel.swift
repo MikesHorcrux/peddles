@@ -1,27 +1,27 @@
 //
-//  AuthManager.swift
+//  AnimalsViewModel.swift
 //  peddles (iOS)
 //
-//  Created by Mike  Van Amburg on 6/24/22.
+//  Created by Mike  Van Amburg on 6/25/22.
 //
 
 import Foundation
 import Combine
-import SwiftUI
 
-class AuthManager: ObservableObject {
-    @AppStorage("token") var token: String?
+class AnimalsViewModel: ObservableObject {
+    //@Published var state = ProfileState()
+    
     private let client: APIClient
     private var cancellables = Set<AnyCancellable>()
-
+    
     init(client: APIClient) {
         self.client = client
-        self.getToken()
+        fetchAnimals()
     }
-
-    func getToken() {
+    
+    func fetchAnimals() {
         client
-            .dispatch(GetTokenRequest())
+            .dispatch(GetAnimals())
             .receive(on: DispatchQueue.main)
             .sink { [weak self] completion in
                 guard case .failure(let error) = completion else {
@@ -29,11 +29,9 @@ class AuthManager: ObservableObject {
                     return
                 }
                 //self?.state.error = error.identifiable
-            } receiveValue: { response in
-                self.token = response.accessToken
-                self.client.assign(accessToken: response.accessToken)
+            } receiveValue: { [weak self] animals in
+                print(animals)
             }
             .store(in: &cancellables)
     }
-    
 }

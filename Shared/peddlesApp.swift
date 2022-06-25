@@ -9,6 +9,7 @@ import SwiftUI
 
 @main
 struct peddlesApp: App {
+    @StateObject var auth = AuthManager(client: DefaultAPIClient.shared)
     var body: some Scene {
         WindowGroup {
             ContentView()
