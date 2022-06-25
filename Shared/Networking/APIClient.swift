@@ -10,7 +10,7 @@ protocol APIClient {
 
 final class DefaultAPIClient: APIClient {
 
-    static let shared = DefaultAPIClient(baseURL: "put url here")
+    static let shared = DefaultAPIClient(baseURL: "https://api.petfinder.com/v2")
     
     private let baseURL: String
     private let networkDispatcher: NetworkDispatcher
@@ -35,6 +35,7 @@ final class DefaultAPIClient: APIClient {
 
     func assign(accessToken: String) {
         headers["Authorization"] = "Bearer \(accessToken)"
+        print("🔐 Token Assigned")
     }
 
     /// Dispatches a Request and returns a publisher
