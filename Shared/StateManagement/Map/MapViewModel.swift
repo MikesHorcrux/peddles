@@ -1,36 +1,37 @@
 //
-//  AnimalsViewModel.swift
-//  peddles (iOS)
+//  MapViewModel.swift
+//  peddles
 //
 //  Created by Mike  Van Amburg on 6/25/22.
 //
 
+
 import Foundation
 import Combine
 
-class AnimalsViewModel: ObservableObject {
-    //@Published var state = ProfileState()
+class MapViewModel: ObservableObject {
+    @Published var state = MapState()
     
     private let client: APIClient
     private var cancellables = Set<AnyCancellable>()
     
     init(client: APIClient) {
         self.client = client
-       // fetchAnimals()
+        //fetchAllOrgs()
     }
     
-    func fetchAnimals() {
+    func fetchAllOrgs() {
         client
-            .dispatch(GetAnimals())
+            .dispatch(GetAllOrgs())
             .receive(on: DispatchQueue.main)
             .sink { [weak self] completion in
                 guard case .failure(let error) = completion else {
                     print(completion)
                     return
                 }
-                //self?.state.error = error.identifiable
-            } receiveValue: { [weak self] animals in
-                print(animals)
+                self?.state.error = error.identifiable
+            } receiveValue: { [weak self] response in
+                print(response)
             }
             .store(in: &cancellables)
     }

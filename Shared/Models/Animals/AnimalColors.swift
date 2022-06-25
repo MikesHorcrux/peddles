@@ -8,7 +8,7 @@
 import Foundation
 
 struct AnimalColors: Codable{
-    var primary: String
+    var primary: String?
     var secondary: String?
 }
 

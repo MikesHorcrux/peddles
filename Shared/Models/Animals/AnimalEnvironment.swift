@@ -8,9 +8,9 @@
 import Foundation
 
 struct AnimalEnvironment: Codable{
-    var children: Bool
-    var dogs: Bool
-    var cats: Bool
+    var children: Bool?
+    var dogs: Bool?
+    var cats: Bool?
 }
 
 

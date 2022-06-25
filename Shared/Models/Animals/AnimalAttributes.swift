@@ -10,7 +10,7 @@ import Foundation
 struct AnimalAttributes: Codable {
     var spayedNeutered: Bool
     var houseTrained: Bool
-    var declawed: Bool
+    var declawed: Bool?
     var specialNeeds: Bool
     var shotsCurrent: Bool
 }
