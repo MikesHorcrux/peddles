@@ -18,9 +18,9 @@ struct Animal: Codable {
     var age: String
     var gender: String
     var size: String
-    var coat: String
+    var coat: String?
     var name: String
-    var description: String
+    var description: String?
     var photos: [Photos]
     var status: String
     var attributes: AnimalAttributes

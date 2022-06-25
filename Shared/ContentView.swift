@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    
+    @StateObject var viewModel = MapViewModel(client: DefaultAPIClient.shared)
     @StateObject var animalsVM = AnimalsViewModel(client: DefaultAPIClient.shared)
     var body: some View {
         VStack {
@@ -16,6 +16,7 @@ struct ContentView: View {
                 .padding()
             Button("animals") {
                 animalsVM.fetchAnimals()
+                //viewModel.fetchAllOrgs()
             }
             
         }

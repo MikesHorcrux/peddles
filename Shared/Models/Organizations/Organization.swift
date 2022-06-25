@@ -18,7 +18,7 @@ struct Organization: Codable {
     var website: String?
     var missionStatement: String?
     var adoption: Policies
-    var photos: Photos
+    var photos: [Photos]?
 }
 
 #if DEBUG
@@ -32,7 +32,7 @@ extension Organization{
         hours: OperationHours = .create(),
         url: String = "https://www.petfinder.com/member/us/nj/jersey-city/nj333-petfinder-test-account/?referrer_id=d7e3700b-2e07-11e9-b3f3-0800275f82b1",
         adoption: Policies = .create(),
-        photos: Photos = .create()
+        photos: [Photos] = [.create()]
     ) -> Self {
         Self(id: id, name: name, email: email, phone: phone, address: address, hours: hours, url: url, adoption: adoption, photos: photos)
     }

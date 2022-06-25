@@ -8,8 +8,8 @@
 import Foundation
 
 struct AnimalContact: Codable{
-    var email: String
-    var phone: String
+    var email: String?
+    var phone: String?
     var address: PFAddress
 }
 
