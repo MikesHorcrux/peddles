@@ -21,7 +21,7 @@ struct Animal: Codable {
     var coat: String
     var name: String
     var description: String
-    var photos: [AnimalPhotos]
+    var photos: [Photos]
     var status: String
     var attributes: AnimalAttributes
     var environment: AnimalEnvironment
@@ -45,7 +45,7 @@ extension Animal {
         coat: String = "short",
         name: String = "Nebula",
         description: String = "Nebula is a shorthaired, shy cat. She is very affectionate once she warms up to you.",
-        photos: [AnimalPhotos] = [.create()],
+        photos: [Photos] = [.create()],
         status: String = "adoptable",
         attributes: AnimalAttributes = .create(),
         environment: AnimalEnvironment = .create(),

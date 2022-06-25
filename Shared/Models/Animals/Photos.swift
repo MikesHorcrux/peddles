@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct AnimalPhotos: Codable{
+struct Photos: Codable{
     var small: String
     var medium: String
     var large: String
@@ -15,7 +15,7 @@ struct AnimalPhotos: Codable{
 }
 
 #if DEBUG
-extension AnimalPhotos {
+extension Photos {
     static func create (
         small: String = "https://photos.petfinder.com/photos/pets/124/1/?bust=1546042081&width=100",
         medium: String = "https://photos.petfinder.com/photos/pets/124/1/?bust=1546042081&width=300",

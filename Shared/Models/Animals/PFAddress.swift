@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ContactAddress: Codable {
+struct PFAddress: Codable {
     var address1: String?
     var address2: String?
     var city: String
@@ -17,7 +17,7 @@ struct ContactAddress: Codable {
 }
 
 #if DEBUG
-extension ContactAddress{
+extension PFAddress{
     static func create(
         address1: String? = nil,
         address2: String? = nil,
