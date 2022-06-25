@@ -35,7 +35,7 @@ class MapViewModel: ObservableObject {
             }
             .store(in: &cancellables)
     }
-    
+
     func fetchOrgsInArea(zipCode: String) {
         client
             .dispatch(GetAllOrgs(queryParams:
@@ -55,4 +55,5 @@ class MapViewModel: ObservableObject {
             }
             .store(in: &cancellables)
     }
+
 }
