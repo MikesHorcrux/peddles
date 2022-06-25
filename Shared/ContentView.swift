@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var auth = AuthManager(client: DefaultAPIClient.shared)
     var body: some View {
         Text("Hello, peddles Lets do this!")
             .padding()

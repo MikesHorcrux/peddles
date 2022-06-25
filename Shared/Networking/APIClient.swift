@@ -10,7 +10,7 @@ protocol APIClient {
 
 final class DefaultAPIClient: APIClient {
 
-    static let shared = DefaultAPIClient(baseURL: "put url here")
+    static let shared = DefaultAPIClient(baseURL: "https://api.petfinder.com/v2")
     
     private let baseURL: String
     private let networkDispatcher: NetworkDispatcher

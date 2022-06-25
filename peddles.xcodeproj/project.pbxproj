@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		550CA2D02867791C004D555A /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550CA2CF2867791C004D555A /* Token.swift */; };
+		5516820428658FC20093556F /* ClientSecrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516820328658FC20093556F /* ClientSecrets.swift */; };
+		551682062865901B0093556F /* GetTokenRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551682052865901B0093556F /* GetTokenRequest.swift */; };
+		55168209286591D00093556F /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55168208286591D00093556F /* AuthManager.swift */; };
+		5516820A286592C50093556F /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55168208286591D00093556F /* AuthManager.swift */; };
 		558F5E5C28655EA000365B05 /* peddlesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558F5E4C28655EA000365B05 /* peddlesApp.swift */; };
 		558F5E5D28655EA000365B05 /* peddlesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558F5E4C28655EA000365B05 /* peddlesApp.swift */; };
 		558F5E5E28655EA000365B05 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558F5E4D28655EA000365B05 /* ContentView.swift */; };
@@ -44,6 +49,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		550CA2CF2867791C004D555A /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		5516820328658FC20093556F /* ClientSecrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientSecrets.swift; sourceTree = "<group>"; };
+		551682052865901B0093556F /* GetTokenRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTokenRequest.swift; sourceTree = "<group>"; };
+		55168208286591D00093556F /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		558F5E4C28655EA000365B05 /* peddlesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = peddlesApp.swift; sourceTree = "<group>"; };
 		558F5E4D28655EA000365B05 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		558F5E4E28655EA000365B05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -84,6 +93,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		550CA2D128677CB0004D555A /* Token */ = {
+			isa = PBXGroup;
+			children = (
+				5516820328658FC20093556F /* ClientSecrets.swift */,
+				551682052865901B0093556F /* GetTokenRequest.swift */,
+				550CA2CF2867791C004D555A /* Token.swift */,
+			);
+			path = Token;
+			sourceTree = "<group>";
+		};
+		5516820228658F940093556F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				550CA2D128677CB0004D555A /* Token */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		55168207286591B20093556F /* StateManagment */ = {
+			isa = PBXGroup;
+			children = (
+				55168208286591D00093556F /* AuthManager.swift */,
+			);
+			path = StateManagment;
+			sourceTree = "<group>";
+		};
 		558F5E4628655E9F00365B05 = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +131,8 @@
 		558F5E4B28655EA000365B05 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				55168207286591B20093556F /* StateManagment */,
+				5516820228658F940093556F /* Model */,
 				558F5E83286565E600365B05 /* Extentions */,
 				558F5E82286564EC00365B05 /* Networking */,
 				558F5E4C28655EA000365B05 /* peddlesApp.swift */,
@@ -248,6 +285,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5516820428658FC20093556F /* ClientSecrets.swift in Sources */,
 				558F5E8A2865660C00365B05 /* error+extention.swift in Sources */,
 				558F5E7C286564E400365B05 /* JSON.swift in Sources */,
 				558F5E74286564E400365B05 /* RequestPublisher.swift in Sources */,
@@ -255,11 +293,14 @@
 				558F5E922865660C00365B05 /* URLRequest+extension.swift in Sources */,
 				558F5E5E28655EA000365B05 /* ContentView.swift in Sources */,
 				558F5E76286564E400365B05 /* APIClient.swift in Sources */,
+				551682062865901B0093556F /* GetTokenRequest.swift in Sources */,
 				558F5E7A286564E400365B05 /* Request.swift in Sources */,
 				558F5E942865660C00365B05 /* Array+extention.swift in Sources */,
+				550CA2D02867791C004D555A /* Token.swift in Sources */,
 				558F5E7E286564E400365B05 /* EnvironmentValues+APIClient.swift in Sources */,
 				558F5E8E2865660C00365B05 /* Dictionary+extension.swift in Sources */,
 				558F5E5C28655EA000365B05 /* peddlesApp.swift in Sources */,
+				55168209286591D00093556F /* AuthManager.swift in Sources */,
 				558F5E8C2865660C00365B05 /* URL+extension.swift in Sources */,
 				558F5E78286564E400365B05 /* NetworkingLogger.swift in Sources */,
 				558F5E80286564E400365B05 /* NetworkRequestError.swift in Sources */,
@@ -278,6 +319,7 @@
 				558F5E932865660C00365B05 /* URLRequest+extension.swift in Sources */,
 				558F5E5F28655EA000365B05 /* ContentView.swift in Sources */,
 				558F5E77286564E400365B05 /* APIClient.swift in Sources */,
+				5516820A286592C50093556F /* AuthManager.swift in Sources */,
 				558F5E7B286564E400365B05 /* Request.swift in Sources */,
 				558F5E952865660C00365B05 /* Array+extention.swift in Sources */,
 				558F5E7F286564E400365B05 /* EnvironmentValues+APIClient.swift in Sources */,
