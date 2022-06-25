@@ -15,8 +15,8 @@ struct ContentView: View {
             Text("Hello, peddles Lets do this!")
                 .padding()
             Button("animals") {
-                animalsVM.fetchAnimals()
-                //viewModel.fetchAllOrgs()
+                //animalsVM.fetchAnimals()
+                viewModel.fetchAllOrgs()
             }
             
         }

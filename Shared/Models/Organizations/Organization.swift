@@ -10,11 +10,11 @@ import Foundation
 struct Organization: Codable {
     var id: String
     var name: String
-    var email: String
-    var phone: String
+    var email: String?
+    var phone: String?
     var address: PFAddress
     var hours: OperationHours
-    var url: String
+    var url: String?
     var website: String?
     var missionStatement: String?
     var adoption: Policies
