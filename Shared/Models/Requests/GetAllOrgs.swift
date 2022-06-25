@@ -12,6 +12,8 @@ struct GetAllOrgs: Request {
 
     let method: HTTPMethod = .get
 
+    var queryParams: [String : String]?
+
     var path: String {
         "organizations"
     }

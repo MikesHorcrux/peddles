@@ -16,7 +16,7 @@ struct ContentView: View {
                 .padding()
             Button("animals") {
                 //animalsVM.fetchAnimals()
-                viewModel.fetchAllOrgs()
+                viewModel.fetchOrgsInArea(zipCode: "78653")
             }
             
         }
