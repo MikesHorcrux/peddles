@@ -8,10 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var auth = AuthManager(client: DefaultAPIClient.shared)
+    
+    @StateObject var animalsVM = AnimalsViewModel(client: DefaultAPIClient.shared)
     var body: some View {
-        Text("Hello, peddles Lets do this!")
-            .padding()
+        VStack {
+            Text("Hello, peddles Lets do this!")
+                .padding()
+            Button("animals") {
+                animalsVM.fetchAnimals()
+            }
+            
+        }
+           
     }
 }
 
