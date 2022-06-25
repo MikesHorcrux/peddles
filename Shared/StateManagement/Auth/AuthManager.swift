@@ -16,12 +16,7 @@ class AuthManager: ObservableObject {
 
     init(client: APIClient) {
         self.client = client
-        if let storedToken = token{
-            client.assign(accessToken: storedToken)
-        } else {
-            self.getToken()
-        }
-        
+        self.getToken()
     }
 
     func getToken() {
