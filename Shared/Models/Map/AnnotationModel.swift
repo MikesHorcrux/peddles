@@ -8,9 +8,8 @@
 import Foundation
 import CoreLocation
 
-struct AnnotationModel{
+struct AnnotationModel: Identifiable{
     var id: String
     var img: String
-    var lat: Double
-    var long: Double
+    var latlong: CLLocationCoordinate2D
 }

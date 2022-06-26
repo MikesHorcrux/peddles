@@ -187,7 +187,6 @@
 				550CA3172867C1C0004D555A /* Map */,
 				550CA2F92867AD3B004D555A /* Animals */,
 				550CA2DB28678047004D555A /* Auth */,
-				550CA3212867DF35004D555A /* LocationManager.swift */,
 			);
 			path = StateManagement;
 			sourceTree = "<group>";
@@ -247,6 +246,7 @@
 		550CA3172867C1C0004D555A /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				550CA3212867DF35004D555A /* LocationManager.swift */,
 				550CA3182867C1D7004D555A /* MapViewModel.swift */,
 				550CA31B2867C2B3004D555A /* MapState.swift */,
 			);

@@ -8,6 +8,7 @@
 import Foundation
 import CoreLocation
 import MapKit
+import Combine
 
 final class LocationManager: NSObject, ObservableObject {
    
@@ -55,8 +56,26 @@ final class LocationManager: NSObject, ObservableObject {
         }
     }
 
+    public func getLocation(from addressString: String) -> Future<CLLocationCoordinate2D, Error> {
+            // do stuff
+        let geocoder = CLGeocoder()
+        // 1. Wrap geocoder.geocodeAddressString in a Future
+          return Future() { promise in
+              // The original code was here
+              geocoder.geocodeAddressString(addressString) { placemarks, error in
+                  if let error = error {
+                      // 2. previously: return completion(nil, error)
+                      return promise(.failure(error))
+                  }
+                  if let placemarks = placemarks,
+                      let coordinate = placemarks.first?.location?.coordinate {
+                      // 2. previously: return completion(coordinate, nil)
+                      return promise(.success(coordinate))
+                  }
+        }
 }
-
+    }
+}
 extension LocationManager: CLLocationManagerDelegate {
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
         if isAuthorized {

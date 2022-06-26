@@ -12,6 +12,7 @@ import CoreLocation
 import SwiftUI
 
 class MapViewModel: ObservableObject {
+    @AppStorage("token") var token: String?
     @Published var state = MapState()
     
     private let client: APIClient
@@ -19,7 +20,6 @@ class MapViewModel: ObservableObject {
     
     init(client: APIClient, state: MapState = MapState()) {
         self.client = client
-        //fetchAllOrgs()
         self.state = state
     }
     
@@ -43,7 +43,8 @@ class MapViewModel: ObservableObject {
         client
             .dispatch(GetAllOrgs(queryParams:
                                     [
-                                        "location": "78653"
+                                        "location": zipCode,
+                                        "limit": "100"
                                     ]))
             .receive(on: DispatchQueue.main)
             .sink { [weak self] completion in
@@ -54,29 +55,19 @@ class MapViewModel: ObservableObject {
                 self?.state.error = error.identifiable
             } receiveValue: { [weak self] response in
                 self?.state.organizations = response
-                
-                var location = CLLocationCoordinate2D()
-                var annotation: [AnnotationModel] = [ ]
+                self?.state.organizationAnnotations.removeAll()
                 for org in response.organizations {
-                    
                     let address = (org.address.address1 ?? "") + " " + (org.address.address2 ?? "") + " " + "\(org.address.city) \(org.address.state) \(org.address.postcode) "
-                   
-                    self?.getCoordinate(addressString: address, completionHandler: { local, error in
-                        location = local
-                        print(location)
-                        print(AnnotationModel(id: org.id, img: org.photos?.first?.small ?? "", lat: location.latitude, long: location.longitude))
-                        annotation.append(AnnotationModel(id: org.id, img: org.photos?.first?.small ?? "", lat: location.latitude, long: location.longitude))
-                        print(annotation)
+                    self?.getCoordinate(addressString: address, completionHandler: { coord, error in
+                            let annotation = AnnotationModel(id: org.id, img: org.photos?.first?.small ?? "", latlong: coord)
+                             self?.state.organizationAnnotations.append(annotation)
                     })
-                    
-                    
-                }
-                self?.state.organizationAnnotations.append(contentsOf: annotation)
+            }
             }
             .store(in: &cancellables)
     }
 
-    func getCoordinate( addressString : String,
+    private func getCoordinate( addressString : String,
             completionHandler: @escaping(CLLocationCoordinate2D, NSError?) -> Void ) {
         let geocoder = CLGeocoder()
         geocoder.geocodeAddressString(addressString) { (placemarks, error) in
