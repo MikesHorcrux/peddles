@@ -9,4 +9,6 @@ import Foundation
 
 struct MapState{
     var error: IdentifiableError?
+    var organizationAnnotations: [AnnotationModel] = []
+    var organizations: Organizations?
 }

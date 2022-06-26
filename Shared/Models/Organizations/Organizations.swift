@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Organizations: Codable {
+struct Organizations: Codable, Hashable {
     var organizations: [Organization]
 }
 

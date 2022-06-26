@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Photos: Codable{
+struct Photos: Codable, Hashable{
     var small: String
     var medium: String
     var large: String

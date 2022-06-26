@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct OperationHours: Codable {
+struct OperationHours: Codable, Hashable {
     var monday: String?
     var tuesday: String?
     var wednessday: String?
