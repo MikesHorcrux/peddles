@@ -18,6 +18,7 @@ struct ContentView: View {
                 //animalsVM.fetchAnimals()
                 viewModel.fetchOrgsInArea(zipCode: "78653")
             }
+            MapView()
             
         }
            
