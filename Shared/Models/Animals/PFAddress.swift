@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct PFAddress: Codable {
+struct PFAddress: Codable, Hashable {
     var address1: String?
     var address2: String?
     var city: String

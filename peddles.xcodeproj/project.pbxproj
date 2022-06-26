@@ -89,6 +89,8 @@
 		558F5E952865660C00365B05 /* Array+extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558F5E892865660C00365B05 /* Array+extention.swift */; };
 		559133A32867FAF4006D7750 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550CA3262867F98B004D555A /* Map.swift */; };
 		559133A42867FAFE006D7750 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550CA3212867DF35004D555A /* LocationManager.swift */; };
+		559133A728681E7F006D7750 /* AnnotationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559133A628681E7F006D7750 /* AnnotationModel.swift */; };
+		559133A828681FDE006D7750 /* AnnotationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559133A628681E7F006D7750 /* AnnotationModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -136,6 +138,7 @@
 		558F5E872865660C00365B05 /* Date+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+extension.swift"; sourceTree = "<group>"; };
 		558F5E882865660C00365B05 /* URLRequest+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLRequest+extension.swift"; sourceTree = "<group>"; };
 		558F5E892865660C00365B05 /* Array+extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+extention.swift"; sourceTree = "<group>"; };
+		559133A628681E7F006D7750 /* AnnotationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +162,7 @@
 		550CA2D228677F47004D555A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				559133A528681E68006D7750 /* Map */,
 				550CA2F62867ACAD004D555A /* Requests */,
 				550CA3072867BB53004D555A /* Organizations */,
 				550CA2E32867984D004D555A /* Animals */,
@@ -243,6 +247,7 @@
 		550CA3172867C1C0004D555A /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				550CA3212867DF35004D555A /* LocationManager.swift */,
 				550CA3182867C1D7004D555A /* MapViewModel.swift */,
 				550CA31B2867C2B3004D555A /* MapState.swift */,
 			);
@@ -324,6 +329,14 @@
 				558F5E882865660C00365B05 /* URLRequest+extension.swift */,
 			);
 			path = Extentions;
+			sourceTree = "<group>";
+		};
+		559133A528681E68006D7750 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				559133A628681E7F006D7750 /* AnnotationModel.swift */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -451,6 +464,7 @@
 				550CA2E728679922004D555A /* AnimalBreeds.swift in Sources */,
 				558F5E942865660C00365B05 /* Array+extention.swift in Sources */,
 				558F5E7E286564E400365B05 /* EnvironmentValues+APIClient.swift in Sources */,
+				559133A728681E7F006D7750 /* AnnotationModel.swift in Sources */,
 				550CA2F12867A5F3004D555A /* AnimalContact.swift in Sources */,
 				558F5E8E2865660C00365B05 /* Dictionary+extension.swift in Sources */,
 				558F5E5C28655EA000365B05 /* peddlesApp.swift in Sources */,
@@ -498,6 +512,7 @@
 				558F5E952865660C00365B05 /* Array+extention.swift in Sources */,
 				558F5E7F286564E400365B05 /* EnvironmentValues+APIClient.swift in Sources */,
 				550CA2FE2867B9FE004D555A /* Animals.swift in Sources */,
+				559133A828681FDE006D7750 /* AnnotationModel.swift in Sources */,
 				558F5E8F2865660C00365B05 /* Dictionary+extension.swift in Sources */,
 				558F5E5D28655EA000365B05 /* peddlesApp.swift in Sources */,
 				559133A32867FAF4006D7750 /* Map.swift in Sources */,

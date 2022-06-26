@@ -7,6 +7,12 @@
 
 import Foundation
 
-struct MapState{
+struct MapState: Equatable{
+    static func == (lhs: MapState, rhs: MapState) -> Bool {
+        return true
+    }
+    
     var error: IdentifiableError?
+    var organizationAnnotations: [AnnotationModel] = []
+    var organizations: Organizations?
 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Policies: Codable{
+struct Policies: Codable, Hashable{
     var policy: String?
     var url: String?
 }
