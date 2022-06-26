@@ -10,10 +10,10 @@ import MapKit
 
 struct MapView: View {
     @ObservedObject var location: LocationManager
+
     @ObservedObject var viewModel: MapViewModel
     @State private var trackingMode = MapUserTrackingMode.follow
     var body: some View {
-       
         Map(
             coordinateRegion: $location.currentRegion,
             interactionModes: .all,
@@ -34,8 +34,6 @@ struct MapView: View {
         }
        
         }
-    
-
 }
 
 #if DEBUG

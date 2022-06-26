@@ -11,6 +11,7 @@ struct ContentView: View {
     @ObservedObject var viewModel = MapViewModel(client: DefaultAPIClient.shared)
     @StateObject var animalsVM = AnimalsViewModel(client: DefaultAPIClient.shared)
     @StateObject var location = LocationManager()
+
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     var body: some View {
@@ -24,8 +25,7 @@ struct ContentView: View {
                     //animalsVM.fetchAnimals()
                     viewModel.fetchOrgsInArea(zipCode: "78653")
                 }
-                
-                
+               
             }
         }
         .onReceive(timer) { time in

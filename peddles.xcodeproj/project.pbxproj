@@ -187,6 +187,7 @@
 				550CA3172867C1C0004D555A /* Map */,
 				550CA2F92867AD3B004D555A /* Animals */,
 				550CA2DB28678047004D555A /* Auth */,
+				550CA3212867DF35004D555A /* LocationManager.swift */,
 			);
 			path = StateManagement;
 			sourceTree = "<group>";
