@@ -10,6 +10,7 @@ import MapKit
 
 struct MapView: View {
     @StateObject var location = LocationManager()
+    @State var region = MKCoordinateRegion()
     var body: some View {
         Map(coordinateRegion: $location.currentRegion, interactionModes: .all, showsUserLocation: true, userTrackingMode: .constant(.follow))
     }
