@@ -9,15 +9,21 @@ import SwiftUI
 import MapKit
 
 struct MapView: View {
-    @StateObject var location = LocationManager()
-    @State var region = MKCoordinateRegion()
+    @ObservedObject var location: LocationManager
+    @State private var trackingMode = MapUserTrackingMode.follow
     var body: some View {
-        Map(coordinateRegion: $location.currentRegion, interactionModes: .all, showsUserLocation: true, userTrackingMode: .constant(.follow))
+        Map(
+            coordinateRegion: $location.currentRegion,
+            interactionModes: .all,
+            showsUserLocation: true,
+            userTrackingMode: $trackingMode)
     }
 }
 
+#if DEBUG
 struct Map_Previews: PreviewProvider {
     static var previews: some View {
-        MapView()
+        MapView(location: LocationManager())
     }
 }
+#endif
