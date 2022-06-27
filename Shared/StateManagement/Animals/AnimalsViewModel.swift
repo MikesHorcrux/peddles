@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 class AnimalsViewModel: ObservableObject {
-    //@Published var state = ProfileState()
+    @Published var state = AnimalState()
     
     private let client: APIClient
     private var cancellables = Set<AnyCancellable>()
@@ -28,7 +28,27 @@ class AnimalsViewModel: ObservableObject {
                     print(completion)
                     return
                 }
-                //self?.state.error = error.identifiable
+                self?.state.error = error.identifiable
+            } receiveValue: { [weak self] animals in
+                self?.state.animals = animals.animals
+            }
+            .store(in: &cancellables)
+    }
+    
+    func fetchAnimalsByOrg(id: String) {
+        client
+            .dispatch(GetAnimals(queryParams:
+                                    [
+                                        "organization": "[\(id)]",
+                                        "limit": "30"
+                                    ]))
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] completion in
+                guard case .failure(let error) = completion else {
+                    print(completion)
+                    return
+                }
+                self?.state.error = error.identifiable
             } receiveValue: { [weak self] animals in
                 print(animals)
             }

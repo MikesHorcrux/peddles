@@ -12,31 +12,27 @@ struct ContentView: View {
     @StateObject var animalsVM = AnimalsViewModel(client: DefaultAPIClient.shared)
     @StateObject var location = LocationManager()
 
-    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-    
+    let timer = Timer.publish(every: 2, on: .main, in: .common).autoconnect()
+    @State var count = 1
     var body: some View {
-        ZStack {
-            MapView(location: location, viewModel: viewModel)
-                .edgesIgnoringSafeArea(.all)
-            VStack {
-                Text("Hello, peddles Lets do this!")
-                    .padding()
-                Button("animals") {
-                    //animalsVM.fetchAnimals()
-                    viewModel.fetchOrgsInArea(zipCode: "78653")
-                }
+        NavigationView{
+            ZStack {
+                MapView(location: location, viewModel: viewModel)
+                    .edgesIgnoringSafeArea(.all)
+                Text("\(count)")
                
             }
-        }
-        .onReceive(timer) { time in
-            if viewModel.token != nil{
-                if !viewModel.state.organizationAnnotations.isEmpty{
-                    timer.upstream.connect().cancel()
-                }else{
-                    viewModel.fetchOrgsInArea(zipCode:"\(location.currentRegion.center.latitude), \(location.currentRegion.center.longitude)")
+            .onReceive(timer) { time in
+                if viewModel.token != nil{
+                    if !viewModel.state.organizationAnnotations.isEmpty{
+                        timer.upstream.connect().cancel()
+                    }else{
+                        viewModel.fetchOrgsInArea(zipCode:"\(location.currentRegion.center.latitude), \(location.currentRegion.center.longitude)")
+                                            }
                 }
-            }
         }
+        }
+        .navigationViewStyle(.automatic)
     }
 }
 

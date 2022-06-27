@@ -91,6 +91,16 @@
 		559133A42867FAFE006D7750 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550CA3212867DF35004D555A /* LocationManager.swift */; };
 		559133A728681E7F006D7750 /* AnnotationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559133A628681E7F006D7750 /* AnnotationModel.swift */; };
 		559133A828681FDE006D7750 /* AnnotationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559133A628681E7F006D7750 /* AnnotationModel.swift */; };
+		559133AA28692B6A006D7750 /* AnimalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559133A928692B6A006D7750 /* AnimalState.swift */; };
+		559133AB28692B6A006D7750 /* AnimalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559133A928692B6A006D7750 /* AnimalState.swift */; };
+		559133AE28692CA2006D7750 /* OrganizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559133AD28692CA2006D7750 /* OrganizationView.swift */; };
+		559133AF28692CA2006D7750 /* OrganizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559133AD28692CA2006D7750 /* OrganizationView.swift */; };
+		559133B228692D36006D7750 /* OrganizationsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559133B128692D36006D7750 /* OrganizationsState.swift */; };
+		559133B328692D36006D7750 /* OrganizationsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559133B128692D36006D7750 /* OrganizationsState.swift */; };
+		559133B528692D68006D7750 /* OrganizationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559133B428692D68006D7750 /* OrganizationsViewModel.swift */; };
+		559133B628692D68006D7750 /* OrganizationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559133B428692D68006D7750 /* OrganizationsViewModel.swift */; };
+		559133B828692E19006D7750 /* GetOrg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559133B728692E19006D7750 /* GetOrg.swift */; };
+		559133B928692E19006D7750 /* GetOrg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559133B728692E19006D7750 /* GetOrg.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -116,7 +126,7 @@
 		550CA3142867C0EA004D555A /* GetAllOrgs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllOrgs.swift; sourceTree = "<group>"; };
 		550CA3182867C1D7004D555A /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		550CA31B2867C2B3004D555A /* MapState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapState.swift; sourceTree = "<group>"; };
-		550CA3212867DF35004D555A /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		550CA3212867DF35004D555A /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocationManager.swift; path = ../LocationManager.swift; sourceTree = "<group>"; };
 		550CA3262867F98B004D555A /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
 		558F5E4C28655EA000365B05 /* peddlesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = peddlesApp.swift; sourceTree = "<group>"; };
 		558F5E4D28655EA000365B05 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -139,6 +149,11 @@
 		558F5E882865660C00365B05 /* URLRequest+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLRequest+extension.swift"; sourceTree = "<group>"; };
 		558F5E892865660C00365B05 /* Array+extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+extention.swift"; sourceTree = "<group>"; };
 		559133A628681E7F006D7750 /* AnnotationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationModel.swift; sourceTree = "<group>"; };
+		559133A928692B6A006D7750 /* AnimalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalState.swift; sourceTree = "<group>"; };
+		559133AD28692CA2006D7750 /* OrganizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationView.swift; sourceTree = "<group>"; };
+		559133B128692D36006D7750 /* OrganizationsState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationsState.swift; sourceTree = "<group>"; };
+		559133B428692D68006D7750 /* OrganizationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationsViewModel.swift; sourceTree = "<group>"; };
+		559133B728692E19006D7750 /* GetOrg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetOrg.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,8 +177,8 @@
 		550CA2D228677F47004D555A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				559133A528681E68006D7750 /* Map */,
 				550CA2F62867ACAD004D555A /* Requests */,
+				559133A528681E68006D7750 /* Map */,
 				550CA3072867BB53004D555A /* Organizations */,
 				550CA2E32867984D004D555A /* Animals */,
 				550CA2D328677F51004D555A /* Token */,
@@ -184,10 +199,10 @@
 		550CA2DA28678030004D555A /* StateManagement */ = {
 			isa = PBXGroup;
 			children = (
+				559133B028692D1C006D7750 /* Organizations */,
 				550CA3172867C1C0004D555A /* Map */,
 				550CA2F92867AD3B004D555A /* Animals */,
 				550CA2DB28678047004D555A /* Auth */,
-				550CA3212867DF35004D555A /* LocationManager.swift */,
 			);
 			path = StateManagement;
 			sourceTree = "<group>";
@@ -221,6 +236,7 @@
 			children = (
 				550CA2F72867ACBD004D555A /* GetAnimals.swift */,
 				550CA3142867C0EA004D555A /* GetAllOrgs.swift */,
+				559133B728692E19006D7750 /* GetOrg.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -229,6 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				550CA2FA2867AD64004D555A /* AnimalsViewModel.swift */,
+				559133A928692B6A006D7750 /* AnimalState.swift */,
 			);
 			path = Animals;
 			sourceTree = "<group>";
@@ -257,6 +274,7 @@
 		550CA3232867F965004D555A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				559133AC28692C88006D7750 /* Organization */,
 				550CA3262867F98B004D555A /* Map.swift */,
 			);
 			path = View;
@@ -337,6 +355,23 @@
 				559133A628681E7F006D7750 /* AnnotationModel.swift */,
 			);
 			path = Map;
+			sourceTree = "<group>";
+		};
+		559133AC28692C88006D7750 /* Organization */ = {
+			isa = PBXGroup;
+			children = (
+				559133AD28692CA2006D7750 /* OrganizationView.swift */,
+			);
+			path = Organization;
+			sourceTree = "<group>";
+		};
+		559133B028692D1C006D7750 /* Organizations */ = {
+			isa = PBXGroup;
+			children = (
+				559133B128692D36006D7750 /* OrganizationsState.swift */,
+				559133B428692D68006D7750 /* OrganizationsViewModel.swift */,
+			);
+			path = Organizations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -442,7 +477,9 @@
 				550CA3092867BB78004D555A /* Organization.swift in Sources */,
 				550CA3152867C0EA004D555A /* GetAllOrgs.swift in Sources */,
 				558F5E7C286564E400365B05 /* JSON.swift in Sources */,
+				559133B828692E19006D7750 /* GetOrg.swift in Sources */,
 				558F5E74286564E400365B05 /* RequestPublisher.swift in Sources */,
+				559133AE28692CA2006D7750 /* OrganizationView.swift in Sources */,
 				550CA30D2867BD57004D555A /* Policies.swift in Sources */,
 				550CA2EB28679C61004D555A /* Photos.swift in Sources */,
 				558F5E72286564E400365B05 /* NetworkDispatcher.swift in Sources */,
@@ -452,6 +489,7 @@
 				558F5E5E28655EA000365B05 /* ContentView.swift in Sources */,
 				558F5E76286564E400365B05 /* APIClient.swift in Sources */,
 				550CA2DD28678063004D555A /* AuthManager.swift in Sources */,
+				559133B228692D36006D7750 /* OrganizationsState.swift in Sources */,
 				550CA2E928679B38004D555A /* AnimalColors.swift in Sources */,
 				550CA2ED2867A2FA004D555A /* AnimalAttributes.swift in Sources */,
 				550CA31C2867C2B3004D555A /* MapState.swift in Sources */,
@@ -465,9 +503,11 @@
 				558F5E942865660C00365B05 /* Array+extention.swift in Sources */,
 				558F5E7E286564E400365B05 /* EnvironmentValues+APIClient.swift in Sources */,
 				559133A728681E7F006D7750 /* AnnotationModel.swift in Sources */,
+				559133B528692D68006D7750 /* OrganizationsViewModel.swift in Sources */,
 				550CA2F12867A5F3004D555A /* AnimalContact.swift in Sources */,
 				558F5E8E2865660C00365B05 /* Dictionary+extension.swift in Sources */,
 				558F5E5C28655EA000365B05 /* peddlesApp.swift in Sources */,
+				559133AA28692B6A006D7750 /* AnimalState.swift in Sources */,
 				550CA2F82867ACBD004D555A /* GetAnimals.swift in Sources */,
 				550CA2F32867A644004D555A /* PFAddress.swift in Sources */,
 				558F5E8C2865660C00365B05 /* URL+extension.swift in Sources */,
@@ -490,7 +530,9 @@
 				550CA30E2867BD57004D555A /* Policies.swift in Sources */,
 				550CA3162867C0EA004D555A /* GetAllOrgs.swift in Sources */,
 				558F5E8B2865660C00365B05 /* error+extention.swift in Sources */,
+				559133B928692E19006D7750 /* GetOrg.swift in Sources */,
 				558F5E7D286564E400365B05 /* JSON.swift in Sources */,
+				559133AF28692CA2006D7750 /* OrganizationView.swift in Sources */,
 				550CA3012867B9FE004D555A /* Animal.swift in Sources */,
 				558F5E75286564E400365B05 /* RequestPublisher.swift in Sources */,
 				550CA2FF2867B9FE004D555A /* AnimalBreeds.swift in Sources */,
@@ -500,6 +542,7 @@
 				559133A42867FAFE006D7750 /* LocationManager.swift in Sources */,
 				558F5E932865660C00365B05 /* URLRequest+extension.swift in Sources */,
 				558F5E5F28655EA000365B05 /* ContentView.swift in Sources */,
+				559133B328692D36006D7750 /* OrganizationsState.swift in Sources */,
 				550CA2FC2867B9FE004D555A /* AnimalAttributes.swift in Sources */,
 				558F5E77286564E400365B05 /* APIClient.swift in Sources */,
 				550CA31D2867C2B3004D555A /* MapState.swift in Sources */,
@@ -513,9 +556,11 @@
 				558F5E7F286564E400365B05 /* EnvironmentValues+APIClient.swift in Sources */,
 				550CA2FE2867B9FE004D555A /* Animals.swift in Sources */,
 				559133A828681FDE006D7750 /* AnnotationModel.swift in Sources */,
+				559133B628692D68006D7750 /* OrganizationsViewModel.swift in Sources */,
 				558F5E8F2865660C00365B05 /* Dictionary+extension.swift in Sources */,
 				558F5E5D28655EA000365B05 /* peddlesApp.swift in Sources */,
 				559133A32867FAF4006D7750 /* Map.swift in Sources */,
+				559133AB28692B6A006D7750 /* AnimalState.swift in Sources */,
 				558F5E8D2865660C00365B05 /* URL+extension.swift in Sources */,
 				550CA3052867BA03004D555A /* GetAnimals.swift in Sources */,
 				550CA3022867B9FE004D555A /* PFAddress.swift in Sources */,
