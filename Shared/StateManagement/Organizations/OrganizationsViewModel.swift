@@ -29,7 +29,7 @@ class OrganizationsViewModel: ObservableObject{
                 }
                 self?.state.error = error.identifiable
             } receiveValue: { [weak self] org in
-                self?.state.orgainization = org
+                self?.state.orgainization = org.organization
             }
             .store(in: &cancellables)
     }

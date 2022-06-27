@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Animal: Codable {
+struct Animal: Codable, Identifiable {
     var id: Int
     var organizationId: String
     var url: String

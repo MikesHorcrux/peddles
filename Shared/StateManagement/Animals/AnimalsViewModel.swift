@@ -39,7 +39,7 @@ class AnimalsViewModel: ObservableObject {
         client
             .dispatch(GetAnimals(queryParams:
                                     [
-                                        "organization": "[\(id)]",
+                                        "organization": id,
                                         "limit": "30"
                                     ]))
             .receive(on: DispatchQueue.main)
@@ -50,7 +50,7 @@ class AnimalsViewModel: ObservableObject {
                 }
                 self?.state.error = error.identifiable
             } receiveValue: { [weak self] animals in
-                print(animals)
+                self?.state.animals = animals.animals
             }
             .store(in: &cancellables)
     }

@@ -8,7 +8,7 @@
 import Foundation
 
 struct GetOrg: Request {
-    typealias ReturnType = Organization
+    typealias ReturnType = SingleOrganization
 
     let method: HTTPMethod = .get
 

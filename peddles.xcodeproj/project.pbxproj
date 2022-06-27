@@ -101,6 +101,16 @@
 		559133B628692D68006D7750 /* OrganizationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559133B428692D68006D7750 /* OrganizationsViewModel.swift */; };
 		559133B828692E19006D7750 /* GetOrg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559133B728692E19006D7750 /* GetOrg.swift */; };
 		559133B928692E19006D7750 /* GetOrg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559133B728692E19006D7750 /* GetOrg.swift */; };
+		5598F3A6286A3418006719B7 /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5598F3A5286A3418006719B7 /* AddressView.swift */; };
+		5598F3A7286A3418006719B7 /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5598F3A5286A3418006719B7 /* AddressView.swift */; };
+		55EBC0F728693DBF00859AEF /* SingleOrganization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EBC0F628693DBF00859AEF /* SingleOrganization.swift */; };
+		55EBC0F828693DBF00859AEF /* SingleOrganization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EBC0F628693DBF00859AEF /* SingleOrganization.swift */; };
+		55EBC0FA28693FCC00859AEF /* MissionStatementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EBC0F928693FCC00859AEF /* MissionStatementView.swift */; };
+		55EBC0FB28693FCC00859AEF /* MissionStatementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EBC0F928693FCC00859AEF /* MissionStatementView.swift */; };
+		55EBC0FD286A100D00859AEF /* AdoptableAnimalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EBC0FC286A100D00859AEF /* AdoptableAnimalsView.swift */; };
+		55EBC0FE286A100D00859AEF /* AdoptableAnimalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EBC0FC286A100D00859AEF /* AdoptableAnimalsView.swift */; };
+		55EBC100286A172A00859AEF /* AnimalPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EBC0FF286A172A00859AEF /* AnimalPhoto.swift */; };
+		55EBC101286A172A00859AEF /* AnimalPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EBC0FF286A172A00859AEF /* AnimalPhoto.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -154,6 +164,11 @@
 		559133B128692D36006D7750 /* OrganizationsState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationsState.swift; sourceTree = "<group>"; };
 		559133B428692D68006D7750 /* OrganizationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationsViewModel.swift; sourceTree = "<group>"; };
 		559133B728692E19006D7750 /* GetOrg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetOrg.swift; sourceTree = "<group>"; };
+		5598F3A5286A3418006719B7 /* AddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressView.swift; sourceTree = "<group>"; };
+		55EBC0F628693DBF00859AEF /* SingleOrganization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleOrganization.swift; sourceTree = "<group>"; };
+		55EBC0F928693FCC00859AEF /* MissionStatementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionStatementView.swift; sourceTree = "<group>"; };
+		55EBC0FC286A100D00859AEF /* AdoptableAnimalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdoptableAnimalsView.swift; sourceTree = "<group>"; };
+		55EBC0FF286A172A00859AEF /* AnimalPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalPhoto.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -257,6 +272,7 @@
 				550CA30C2867BD57004D555A /* Policies.swift */,
 				550CA30A2867BBEA004D555A /* OperationHours.swift */,
 				550CA3112867BFC3004D555A /* Organizations.swift */,
+				55EBC0F628693DBF00859AEF /* SingleOrganization.swift */,
 			);
 			path = Organizations;
 			sourceTree = "<group>";
@@ -361,6 +377,10 @@
 			isa = PBXGroup;
 			children = (
 				559133AD28692CA2006D7750 /* OrganizationView.swift */,
+				55EBC0F928693FCC00859AEF /* MissionStatementView.swift */,
+				55EBC0FC286A100D00859AEF /* AdoptableAnimalsView.swift */,
+				55EBC0FF286A172A00859AEF /* AnimalPhoto.swift */,
+				5598F3A5286A3418006719B7 /* AddressView.swift */,
 			);
 			path = Organization;
 			sourceTree = "<group>";
@@ -486,6 +506,7 @@
 				558F5E922865660C00365B05 /* URLRequest+extension.swift in Sources */,
 				550CA3272867F98B004D555A /* Map.swift in Sources */,
 				550CA3122867BFC3004D555A /* Organizations.swift in Sources */,
+				5598F3A6286A3418006719B7 /* AddressView.swift in Sources */,
 				558F5E5E28655EA000365B05 /* ContentView.swift in Sources */,
 				558F5E76286564E400365B05 /* APIClient.swift in Sources */,
 				550CA2DD28678063004D555A /* AuthManager.swift in Sources */,
@@ -494,11 +515,14 @@
 				550CA2ED2867A2FA004D555A /* AnimalAttributes.swift in Sources */,
 				550CA31C2867C2B3004D555A /* MapState.swift in Sources */,
 				558F5E7A286564E400365B05 /* Request.swift in Sources */,
+				55EBC0F728693DBF00859AEF /* SingleOrganization.swift in Sources */,
+				55EBC0FA28693FCC00859AEF /* MissionStatementView.swift in Sources */,
 				550CA2D928677FB5004D555A /* ClientSecrets.swift in Sources */,
 				550CA2FB2867AD64004D555A /* AnimalsViewModel.swift in Sources */,
 				550CA3192867C1D7004D555A /* MapViewModel.swift in Sources */,
 				550CA2E528679863004D555A /* Animal.swift in Sources */,
 				550CA2F52867ABDD004D555A /* Animals.swift in Sources */,
+				55EBC0FD286A100D00859AEF /* AdoptableAnimalsView.swift in Sources */,
 				550CA2E728679922004D555A /* AnimalBreeds.swift in Sources */,
 				558F5E942865660C00365B05 /* Array+extention.swift in Sources */,
 				558F5E7E286564E400365B05 /* EnvironmentValues+APIClient.swift in Sources */,
@@ -517,6 +541,7 @@
 				550CA2D528677F63004D555A /* Token.swift in Sources */,
 				558F5E902865660C00365B05 /* Date+extension.swift in Sources */,
 				550CA2EF2867A4C0004D555A /* AnimalEnvironment.swift in Sources */,
+				55EBC100286A172A00859AEF /* AnimalPhoto.swift in Sources */,
 				550CA3222867DF35004D555A /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -539,6 +564,7 @@
 				550CA2FD2867B9FE004D555A /* Photos.swift in Sources */,
 				550CA3132867BFC3004D555A /* Organizations.swift in Sources */,
 				558F5E73286564E400365B05 /* NetworkDispatcher.swift in Sources */,
+				5598F3A7286A3418006719B7 /* AddressView.swift in Sources */,
 				559133A42867FAFE006D7750 /* LocationManager.swift in Sources */,
 				558F5E932865660C00365B05 /* URLRequest+extension.swift in Sources */,
 				558F5E5F28655EA000365B05 /* ContentView.swift in Sources */,
@@ -547,11 +573,14 @@
 				558F5E77286564E400365B05 /* APIClient.swift in Sources */,
 				550CA31D2867C2B3004D555A /* MapState.swift in Sources */,
 				550CA2DE286782A6004D555A /* AuthManager.swift in Sources */,
+				55EBC0F828693DBF00859AEF /* SingleOrganization.swift in Sources */,
+				55EBC0FB28693FCC00859AEF /* MissionStatementView.swift in Sources */,
 				550CA3042867B9FE004D555A /* AnimalContact.swift in Sources */,
 				550CA3062867BA18004D555A /* AnimalsViewModel.swift in Sources */,
 				550CA31A2867C1D7004D555A /* MapViewModel.swift in Sources */,
 				550CA3032867B9FE004D555A /* AnimalColors.swift in Sources */,
 				558F5E7B286564E400365B05 /* Request.swift in Sources */,
+				55EBC0FE286A100D00859AEF /* AdoptableAnimalsView.swift in Sources */,
 				558F5E952865660C00365B05 /* Array+extention.swift in Sources */,
 				558F5E7F286564E400365B05 /* EnvironmentValues+APIClient.swift in Sources */,
 				550CA2FE2867B9FE004D555A /* Animals.swift in Sources */,
@@ -570,6 +599,7 @@
 				550CA30F2867BE8D004D555A /* OperationHours.swift in Sources */,
 				550CA2E1286782BA004D555A /* GetTokenRequest.swift in Sources */,
 				558F5E912865660C00365B05 /* Date+extension.swift in Sources */,
+				55EBC101286A172A00859AEF /* AnimalPhoto.swift in Sources */,
 				550CA3002867B9FE004D555A /* AnimalEnvironment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
