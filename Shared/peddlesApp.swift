@@ -11,10 +11,6 @@ import SwiftUI
 struct peddlesApp: App {
     @StateObject var auth = AuthManager(client: DefaultAPIClient.shared)
     
-//    init(){
-//        auth.token == nil
-//    }
-    
     var body: some Scene {
         WindowGroup {
             ContentView()

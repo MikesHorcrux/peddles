@@ -29,7 +29,7 @@ struct MapView: View {
                     OrganizationView(orgId: item.id)
                 }, label: {
                     annotationImage(img: item.img)
-
+                    
                 })
                 .buttonStyle(.plain)
             }

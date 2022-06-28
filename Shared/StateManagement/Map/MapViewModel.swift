@@ -29,16 +29,16 @@ class MapViewModel: ObservableObject {
             .receive(on: DispatchQueue.main)
             .sink { [weak self] completion in
                 guard case .failure(let error) = completion else {
-                    print(completion)
                     return
                 }
+                //todo: add error handling
                 self?.state.error = error.identifiable
             } receiveValue: { [weak self] response in
                 print(response)
             }
             .store(in: &cancellables)
     }
-
+    
     func fetchOrgsInArea(zipCode: String) {
         client
             .dispatch(GetAllOrgs(queryParams:
@@ -49,9 +49,9 @@ class MapViewModel: ObservableObject {
             .receive(on: DispatchQueue.main)
             .sink { [weak self] completion in
                 guard case .failure(let error) = completion else {
-                    print(completion)
                     return
                 }
+                //todo: add error handling
                 self?.state.error = error.identifiable
             } receiveValue: { [weak self] response in
                 self?.state.organizations = response
@@ -59,27 +59,27 @@ class MapViewModel: ObservableObject {
                 for org in response.organizations {
                     let address = (org.address.address1 ?? "") + " " + (org.address.address2 ?? "") + " " + "\(org.address.city) \(org.address.state) \(org.address.postcode) "
                     self?.getCoordinate(addressString: address, completionHandler: { coord, error in
-                            let annotation = AnnotationModel(id: org.id, img: org.photos?.first?.small ?? "", latlong: coord)
-                             self?.state.organizationAnnotations.append(annotation)
+                        let annotation = AnnotationModel(id: org.id, img: org.photos?.first?.small ?? "", latlong: coord)
+                        self?.state.organizationAnnotations.append(annotation)
                     })
-            }
+                }
             }
             .store(in: &cancellables)
     }
-
+    
     private func getCoordinate( addressString : String,
-            completionHandler: @escaping(CLLocationCoordinate2D, NSError?) -> Void ) {
+                                completionHandler: @escaping(CLLocationCoordinate2D, NSError?) -> Void ) {
         let geocoder = CLGeocoder()
         geocoder.geocodeAddressString(addressString) { (placemarks, error) in
             if error == nil {
                 if let placemark = placemarks?[0] {
                     let location = placemark.location!
-                        
+                    
                     completionHandler(location.coordinate, nil)
                     return
                 }
             }
-                
+            
             completionHandler(kCLLocationCoordinate2DInvalid, error as NSError?)
         }
     }

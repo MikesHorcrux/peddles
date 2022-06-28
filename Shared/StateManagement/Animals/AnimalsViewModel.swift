@@ -16,7 +16,6 @@ class AnimalsViewModel: ObservableObject {
     
     init(client: APIClient) {
         self.client = client
-       // fetchAnimals()
     }
     
     func fetchAnimals() {
@@ -28,6 +27,7 @@ class AnimalsViewModel: ObservableObject {
                     print(completion)
                     return
                 }
+                //todo: add error handling
                 self?.state.error = error.identifiable
             } receiveValue: { [weak self] animals in
                 self?.state.animals = animals.animals
@@ -45,10 +45,11 @@ class AnimalsViewModel: ObservableObject {
             .receive(on: DispatchQueue.main)
             .sink { [weak self] completion in
                 guard case .failure(let error) = completion else {
-                    print(completion)
                     return
                 }
+                //todo: add error handling
                 self?.state.error = error.identifiable
+                print(error.identifiable)
             } receiveValue: { [weak self] animals in
                 self?.state.animals = animals.animals
             }

@@ -13,17 +13,17 @@ struct MissionStatementView: View {
         VStack(alignment: .leading, spacing: 20){
             if missionStatement != nil{
                 
-            Text("Our Mission: ")
+                Text("Our Mission: ")
                     .font(.subheadline)
                     .bold()
-                    
-            Text(missionStatement ?? "")
+                
+                Text(missionStatement ?? "")
                     .padding(.leading, 15)
                     .font(.body)
                     .multilineTextAlignment(.leading)
                 
             } else{
-            EmptyView()
+                EmptyView()
             }
         }
         .padding()

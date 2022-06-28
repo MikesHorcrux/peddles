@@ -10,8 +10,8 @@ import SwiftUI
 struct AdoptableAnimalsView: View {
     @ObservedObject var animalsViewModel: AnimalsViewModel
     let columns = [
-           GridItem(.adaptive(minimum: 100))
-       ]
+        GridItem(.adaptive(minimum: 100))
+    ]
     var body: some View {
         VStack {
             Text("Meet our adoptable peddles")

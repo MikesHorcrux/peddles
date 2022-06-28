@@ -24,9 +24,9 @@ class OrganizationsViewModel: ObservableObject{
             .receive(on: DispatchQueue.main)
             .sink { [weak self] completion in
                 guard case .failure(let error) = completion else {
-                    print(completion)
                     return
                 }
+                //todo: add error handling
                 self?.state.error = error.identifiable
             } receiveValue: { [weak self] org in
                 self?.state.orgainization = org.organization

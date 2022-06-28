@@ -11,7 +11,7 @@ public enum HTTPMethod: String {
 
 protocol Request {
     associatedtype ReturnType: Codable
-
+    
     var path: String { get }
     var method: HTTPMethod { get }
     var contentType: String { get }
@@ -24,9 +24,9 @@ protocol Request {
     func mock() -> RequestPublisher<ReturnType>
 }
 
-    // Defaults and Helper Methods
+// Defaults and Helper Methods
 extension Request {
-        // Defaults
+    // Defaults
     var method: HTTPMethod { return .get }
     var contentType: String { return "application/json" }
     var queryParams: [String: String]? { return nil }
@@ -54,7 +54,7 @@ extension Request {
         }
         return httpBody
     }
-
+    
     /// Transforms an Request into a standard URL request
     /// - Parameter baseURL: API Base URL to be used
     /// - Parameter sharedHeaders: Additional Headers to add to the request
@@ -68,7 +68,7 @@ extension Request {
         print(request)
         return request
     }
-
+    
     private func url(baseURL: String) -> URL? {
         guard var urlComponents = URLComponents(string: baseURL) else { return nil }
         
@@ -82,7 +82,7 @@ extension Request {
                 urlComponents.queryItems?.append(item)
             }
         }
-
+        
         return urlComponents.url
     }
 }

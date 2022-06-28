@@ -11,7 +11,7 @@ struct ContentView: View {
     @ObservedObject var viewModel = MapViewModel(client: DefaultAPIClient.shared)
     @StateObject var animalsVM = AnimalsViewModel(client: DefaultAPIClient.shared)
     @StateObject var location = LocationManager()
-
+    
     let timer = Timer.publish(every: 2, on: .main, in: .common).autoconnect()
     @State var count = 1
     var body: some View {
@@ -20,7 +20,7 @@ struct ContentView: View {
                 MapView(location: location, viewModel: viewModel)
                     .edgesIgnoringSafeArea(.all)
                 Text("\(count)")
-               
+                
             }
             .onReceive(timer) { time in
                 if viewModel.token != nil{
@@ -28,9 +28,9 @@ struct ContentView: View {
                         timer.upstream.connect().cancel()
                     }else{
                         viewModel.fetchOrgsInArea(zipCode:"\(location.currentRegion.center.latitude), \(location.currentRegion.center.longitude)")
-                                            }
+                    }
                 }
-        }
+            }
         }
         .navigationViewStyle(.automatic)
     }

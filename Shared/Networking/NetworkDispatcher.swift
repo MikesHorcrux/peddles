@@ -4,45 +4,38 @@ import Combine
 struct NetworkDispatcher {
     private let urlSession: URLSession
     private let logger: NetworkingLogger
-
+    
     public init(urlSession: URLSession = .shared, logger: NetworkingLogger = .init()) {
         self.urlSession = urlSession
         self.logger = logger
     }
-
+    
     /// Dispatches an URLRequest and returns a publisher
     /// - Parameter request: URLRequest
     /// - Returns: A publisher with the provided decoded data or an error
     func dispatch<ReturnType: Codable>(request: URLRequest) -> AnyPublisher<ReturnType, NetworkRequestError> {
         logger.log(request)
-
+        
         return urlSession
             .dataTaskPublisher(for: request)
-            // Map on RequestV1 response
             .tryMap { data, response in
                 logger.log(response, data: data)
-
-                // If the response is invalid, throw an error
                 if let response = response as? HTTPURLResponse,
                    !(200...299).contains(response.statusCode) {
                     throw httpError(httpStatusCode: response.statusCode, json: data)
                 }
-                // Return Response data
                 return data
             }
-            // Decode data using our ReturnType
             .decode(type: ReturnType.self, decoder: JSON.decoder)
-            // Handle any decoding errors
             .mapError { error in
                 handleError(error)
             }
-            // And finally, expose our publisher
             .eraseToAnyPublisher()
     }
 }
 
 extension NetworkDispatcher {
-/// Parses a HTTP StatusCode and returns a proper error
+    /// Parses a HTTP StatusCode and returns a proper error
     /// - Parameter httpStatusCode: HTTP status code
     /// - Parameter json?:  body of the response from api
     /// - Returns: Mapped Error
@@ -76,7 +69,7 @@ extension NetworkDispatcher {
             return .unknownError
         }
     }
-
+    
     private func parseError( from json: Data?) -> DetailedNetworkRequestError? {
         guard let json = json else { return nil }
         return try? JSONDecoder().decode(DetailedNetworkRequestError.self, from: json)

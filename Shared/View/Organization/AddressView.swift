@@ -10,7 +10,7 @@ import MapKit
 
 struct AddressView: View {
     var org: PFAddress?
-
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 5){
             if let org = org{

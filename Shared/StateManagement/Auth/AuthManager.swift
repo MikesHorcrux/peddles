@@ -13,22 +13,21 @@ class AuthManager: ObservableObject {
     @AppStorage("token") var token: String?
     private let client: APIClient
     private var cancellables = Set<AnyCancellable>()
-
+    
     init(client: APIClient) {
         self.client = client
         self.getToken()
     }
-
+    
     func getToken() {
         client
             .dispatch(GetTokenRequest())
             .receive(on: DispatchQueue.main)
             .sink { [weak self] completion in
                 guard case .failure(let error) = completion else {
-                    print(completion)
                     return
                 }
-                //self?.state.error = error.identifiable
+                print(error.identifiable)
             } receiveValue: { response in
                 self.token = response.accessToken
                 self.client.assign(accessToken: response.accessToken)
