@@ -24,9 +24,9 @@ protocol Request {
     func mock() -> RequestPublisher<ReturnType>
 }
 
-    // Defaults and Helper Methods
+// Defaults and Helper Methods
 extension Request {
-        // Defaults
+    // Defaults
     var method: HTTPMethod { return .get }
     var contentType: String { return "application/json" }
     var queryParams: [String: String]? { return nil }
@@ -71,9 +71,9 @@ extension Request {
 
     private func url(baseURL: String) -> URL? {
         guard var urlComponents = URLComponents(string: baseURL) else { return nil }
-        
+
         urlComponents.path = "\(urlComponents.path)/\(path)/"
-        
+
         queryParams?.forEach { key, value in
             let item = URLQueryItem(name: key, value: value)
             if urlComponents.queryItems == nil {

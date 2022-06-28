@@ -22,7 +22,7 @@ struct Organization: Codable, Hashable {
 }
 
 #if DEBUG
-extension Organization{
+extension Organization {
     static func create(
         id: String = "tx233",
         name: String = "NJ333 - Petfinder Test Account",

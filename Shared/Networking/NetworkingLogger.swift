@@ -15,7 +15,7 @@ struct NetworkingLogger {
         queue.async {
             guard let url = request.url?.absoluteString,
                   let method = request.httpMethod
-                  else { return }
+            else { return }
 
             logger.trace("""
                 📡 📡 📡 📡 📡
@@ -32,7 +32,7 @@ struct NetworkingLogger {
         queue.async {
             guard let response = response as? HTTPURLResponse,
                   let url = response.url?.absoluteString
-                  else { return }
+            else { return }
 
             logger.trace("""
                 🌎 🌎 🌎 🌎 🌎
@@ -58,10 +58,10 @@ struct NetworkingLogger {
     private func dataLog(_ data: Data) -> String? {
         do {
             let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers)
-             let prettyData = try JSONSerialization.data(withJSONObject: json, options: .prettyPrinted)
-             return String(data: prettyData, encoding: .utf8)
-         } catch {
+            let prettyData = try JSONSerialization.data(withJSONObject: json, options: .prettyPrinted)
+            return String(data: prettyData, encoding: .utf8)
+        } catch {
             return String(describing: NSString(data: data, encoding: String.Encoding.utf8.rawValue))
-         }
+        }
     }
 }

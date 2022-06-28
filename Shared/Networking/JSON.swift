@@ -1,7 +1,7 @@
 import Foundation
 
-struct JSON{
-    
+struct JSON {
+
     static let encoder: JSONEncoder = {
         let encoder = JSONEncoder()
         encoder.keyEncodingStrategy = .convertToSnakeCase
@@ -14,7 +14,6 @@ struct JSON{
         return decoder
     }()
 
-    
     private enum Error: Swift.Error {
         case wrongDateFormat(String)
     }

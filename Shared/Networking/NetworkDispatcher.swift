@@ -18,31 +18,24 @@ struct NetworkDispatcher {
 
         return urlSession
             .dataTaskPublisher(for: request)
-            // Map on RequestV1 response
             .tryMap { data, response in
                 logger.log(response, data: data)
-
-                // If the response is invalid, throw an error
                 if let response = response as? HTTPURLResponse,
                    !(200...299).contains(response.statusCode) {
                     throw httpError(httpStatusCode: response.statusCode, json: data)
                 }
-                // Return Response data
                 return data
             }
-            // Decode data using our ReturnType
             .decode(type: ReturnType.self, decoder: JSON.decoder)
-            // Handle any decoding errors
             .mapError { error in
                 handleError(error)
             }
-            // And finally, expose our publisher
             .eraseToAnyPublisher()
     }
 }
 
 extension NetworkDispatcher {
-/// Parses a HTTP StatusCode and returns a proper error
+    /// Parses a HTTP StatusCode and returns a proper error
     /// - Parameter httpStatusCode: HTTP status code
     /// - Parameter json?:  body of the response from api
     /// - Returns: Mapped Error

@@ -10,8 +10,7 @@ import CoreLocation
 import MapKit
 
 final class LocationManager: NSObject, ObservableObject {
-   
-    
+
     @Published var currentRegion = MKCoordinateRegion()
     @Published var usersLocation = CLLocation()
     @Published var invalidPermission: Bool = false
@@ -19,7 +18,7 @@ final class LocationManager: NSObject, ObservableObject {
 
     override init() {
         super.init()
-        
+
         manager.delegate = self
         manager.desiredAccuracy = kCLLocationAccuracyBest
         self.startLocation()

@@ -18,7 +18,7 @@ struct OperationHours: Codable, Hashable {
 }
 
 #if DEBUG
-extension OperationHours{
+extension OperationHours {
     static func create(
         monday: String? = nil,
         tuesday: String? = nil,
@@ -27,7 +27,7 @@ extension OperationHours{
         friday: String? = nil,
         saturday: String? = nil,
         sunday: String? = nil
-    ) -> Self{
+    ) -> Self {
         Self(thursday: thursday)
     }
 }

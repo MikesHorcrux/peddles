@@ -7,17 +7,17 @@
 
 import Foundation
 
-struct Policies: Codable, Hashable{
+struct Policies: Codable, Hashable {
     var policy: String?
     var url: String?
 }
 
 #if DEBUG
-extension Policies{
+extension Policies {
     static func create(
         policy: String? = nil,
         url: String? = nil
-    ) -> Self{
+    ) -> Self {
         Self()
     }
 }

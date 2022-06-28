@@ -7,15 +7,15 @@
 
 import Foundation
 
-struct Animals: Codable{
+struct Animals: Codable {
     var animals: [Animal]
 }
 
 #if DEBUG
-extension Animals{
+extension Animals {
     static func create(
         animals: [Animal] = [.create()]
-    ) -> Self{
+    ) -> Self {
         Self(animals: animals)
     }
 }

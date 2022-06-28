@@ -11,7 +11,7 @@ protocol APIClient {
 final class DefaultAPIClient: APIClient {
 
     static let shared = DefaultAPIClient(baseURL: "https://api.petfinder.com/v2")
-    
+
     private let baseURL: String
     private let networkDispatcher: NetworkDispatcher
 
@@ -22,11 +22,11 @@ final class DefaultAPIClient: APIClient {
 
     init(baseURL: String,
          networkDispatcher: NetworkDispatcher = NetworkDispatcher()
-        // override: String = ""
+         // override: String = ""
     ) {
         self.baseURL = baseURL
         self.networkDispatcher = networkDispatcher
-       // self.override = override
+        // self.override = override
     }
 
     var accessToken: String? {
