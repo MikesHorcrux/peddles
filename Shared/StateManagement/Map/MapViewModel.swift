@@ -37,7 +37,23 @@ class MapViewModel: ObservableObject {
             }
             .store(in: &cancellables)
     }
-
+    
+    func fetchOrganization(id: String) {
+        client
+            .dispatch(GetOrg(id: id))
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] completion in
+                guard case .failure(let error) = completion else {
+                    return
+                }
+                // todo: add error handling
+                self?.state.error = error.identifiable
+            } receiveValue: { [weak self] org in
+                self?.state.orgainization = org.organization
+            }
+            .store(in: &cancellables)
+    }
+    
     func fetchOrgsInArea(longLat: String) {
         client
             .dispatch(GetAllOrgs(queryParams:

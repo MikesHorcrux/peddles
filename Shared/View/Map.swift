@@ -25,7 +25,7 @@ struct MapView: View {
         ) { item in
             MapAnnotation(coordinate: item.latlong) {
                 NavigationLink(destination: {
-                    OrganizationView(orgId: item.id)
+                    OrganizationView(orgViewModel: viewModel, orgId: item.id)
                 }, label: {
                     annotationImage(img: item.img)
 

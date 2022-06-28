@@ -9,24 +9,28 @@ import SwiftUI
 
 struct OrganizationView: View {
     @ObservedObject var animalsViewModel = AnimalsViewModel(client: DefaultAPIClient.shared)
-    @ObservedObject var orgViewModel = OrganizationsViewModel(client: DefaultAPIClient.shared)
+    @ObservedObject var orgViewModel: MapViewModel
+    @State var org: Organization?
     var orgId: String
     var body: some View {
         VStack {
-            AdoptableAnimalsView(animalsViewModel: animalsViewModel)
+           AdoptableAnimalsView(animalsViewModel: animalsViewModel)
             Divider()
-
-            MissionStatementView(missionStatement: orgViewModel.state.orgainization?.missionStatement)
+            if let org = org {
+            MissionStatementView(missionStatement: org.missionStatement)
             HStack(alignment: .top) {
-                AddressView(org: orgViewModel.state.orgainization?.address)
-                ContactView(phone: orgViewModel.state.orgainization?.phone ?? "unknown", email: orgViewModel.state.orgainization?.email ?? "unknown")
+                AddressView(org: org.address)
+                ContactView(phone: org.phone ?? "unknown", email: org.email ?? "unknown")
             }
             .padding()
             Spacer()
+            }
         }
         .onAppear {
-            orgViewModel.fetchOrganization(id: orgId)
-            animalsViewModel.fetchAnimalsByOrg(id: orgId)
+           animalsViewModel.fetchAnimalsByOrg(id: orgId)
+            self.org = orgViewModel.state.organizations?.organizations.first(where: { item in
+                item.id == orgId
+            })
         }
         .navigationTitle(orgViewModel.state.orgainization?.name ?? "")
         .navigationBarTitleDisplayMode(.inline)
@@ -36,11 +40,8 @@ struct OrganizationView: View {
 #if DEBUG
 struct OrganizationView_Previews: PreviewProvider {
     static var previews: some View {
-        var orgViewModel = OrganizationsViewModel(client: InMemoryAPIClient())
-        OrganizationView(orgId: "")
-            .onAppear {
-                orgViewModel.state.orgainization = .create()
-            }
+        var orgViewModel = MapViewModel(client: InMemoryAPIClient())
+        OrganizationView(orgViewModel: orgViewModel, orgId: "")
     }
 }
 #endif
