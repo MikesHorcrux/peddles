@@ -17,7 +17,7 @@ struct PFAddress: Codable, Hashable {
 }
 
 #if DEBUG
-extension PFAddress{
+extension PFAddress {
     static func create(
         address1: String? = nil,
         address2: String? = nil,

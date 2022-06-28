@@ -10,12 +10,12 @@ import MapKit
 
 struct MapView: View {
     @ObservedObject var location: LocationManager
-    
+
     @ObservedObject var viewModel: MapViewModel
     @State private var trackingMode = MapUserTrackingMode.follow
     @State private var region: MKCoordinateRegion = .init()
     var body: some View {
-        
+
         Map(
             coordinateRegion: $region,
             interactionModes: .all,
@@ -28,7 +28,7 @@ struct MapView: View {
                     OrganizationView(orgId: item.id)
                 }, label: {
                     annotationImage(img: item.img)
-                    
+
                 })
                 .buttonStyle(.plain)
             }
@@ -36,7 +36,7 @@ struct MapView: View {
         .onAppear {
             region = location.currentRegion
         }
-        
+
     }
     private func annotationImage(img: String) -> some View {
         AsyncImage(url: URL(string: img)) { image in

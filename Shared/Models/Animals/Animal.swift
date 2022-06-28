@@ -57,7 +57,7 @@ extension Animal {
             "Affectionate"
         ],
         contact: AnimalContact = .create()
-    ) -> Self{
+    ) -> Self {
         Self(id: id, organizationId: organizationId, url: url, type: type, species: species, breeds: breeds, colors: colors, age: age, gender: gender, size: size, coat: coat, name: name, description: description, photos: photos, status: status, attributes: attributes, environment: environment, tags: tags, contact: contact)
     }
 }

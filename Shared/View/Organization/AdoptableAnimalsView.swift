@@ -28,7 +28,7 @@ struct AdoptableAnimalsView: View {
                 }
                 .frame(maxHeight: 400)
             } else {
-                VStack{
+                VStack {
                     Text("sorry all of our animals have homes")
                     Text("🐶🐰🐱")
                 }
@@ -36,14 +36,14 @@ struct AdoptableAnimalsView: View {
                 .font(.title)
                 .frame(height: 400)
             }
-            
+
         }
     }
 }
 
 #if DEBUG
 struct AdoptableAnimalsView_Previews: PreviewProvider {
-    
+
     static var previews: some View {
         let viewModel = AnimalsViewModel(client: InMemoryAPIClient())
         AdoptableAnimalsView(animalsViewModel: viewModel)

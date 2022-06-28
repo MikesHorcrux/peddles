@@ -10,14 +10,14 @@ import MapKit
 
 struct AddressView: View {
     var org: PFAddress?
-    
+
     var body: some View {
-        VStack(alignment: .leading, spacing: 5){
-            if let org = org{
+        VStack(alignment: .leading, spacing: 5) {
+            if let org = org {
                 Text("Our location: ")
                     .font(.headline)
                     .padding(.vertical)
-                VStack(alignment: .leading){
+                VStack(alignment: .leading) {
                     if let address1 = org.address1 {
                         Text(address1)
                     }
@@ -32,16 +32,16 @@ struct AddressView: View {
             }
         }
     }
-    
+
 }
 
 #if DEBUG
 struct AddressView_Previews: PreviewProvider {
-    
+
     static var previews: some View {
-        
+
         let address = PFAddress(address1: "1234 Somewhere pl", city: "Austin", state: "TX", postcode: "98747", country: "US")
-        
+
         VStack {
             AddressView(org: address)
             AddressView(org: PFAddress.create())

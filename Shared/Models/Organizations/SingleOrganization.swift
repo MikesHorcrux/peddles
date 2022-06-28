@@ -7,13 +7,13 @@
 
 import Foundation
 
-struct SingleOrganization: Codable{
+struct SingleOrganization: Codable {
     var organization: Organization
 }
 
 #if DEBUG
 extension SingleOrganization {
-    static func create(organization: Organization = .create()) -> Self{
+    static func create(organization: Organization = .create()) -> Self {
         Self(organization: organization)
     }
 }

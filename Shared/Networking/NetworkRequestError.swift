@@ -13,7 +13,7 @@ enum NetworkRequestError: LocalizedError, Equatable {
     case urlSessionFailed(_ error: URLError)
     case unknownError
     case detailed(DetailedNetworkRequestError)
-    
+
     var errorDescription: String? {
         switch self {
         case .unauthorized:
@@ -24,7 +24,7 @@ enum NetworkRequestError: LocalizedError, Equatable {
             return "There seems to be a problem. Please contact support."
         }
     }
-    
+
     var isUnexpected: Bool {
         switch self {
         case .unauthorized, .detailed:

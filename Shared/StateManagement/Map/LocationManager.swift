@@ -11,8 +11,7 @@ import MapKit
 import Combine
 
 final class LocationManager: NSObject, ObservableObject {
-   
-    
+
     @Published var currentRegion = MKCoordinateRegion()
     @Published var usersLocation = CLLocation()
     @Published var invalidPermission: Bool = false
@@ -20,7 +19,7 @@ final class LocationManager: NSObject, ObservableObject {
 
     override init() {
         super.init()
-        
+
         manager.delegate = self
         manager.desiredAccuracy = kCLLocationAccuracyBest
         self.startLocation()
@@ -60,7 +59,7 @@ final class LocationManager: NSObject, ObservableObject {
             // do stuff
         let geocoder = CLGeocoder()
         // 1. Wrap geocoder.geocodeAddressString in a Future
-          return Future() { promise in
+          return Future { promise in
               // The original code was here
               geocoder.geocodeAddressString(addressString) { placemarks, error in
                   if let error = error {

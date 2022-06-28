@@ -11,7 +11,7 @@ struct ContactView: View {
     var phone: String
     var email: String
     var body: some View {
-        VStack(alignment: .leading){
+        VStack(alignment: .leading) {
             Text("Contact info:")
                 .font(.headline)
                 .padding(.vertical)

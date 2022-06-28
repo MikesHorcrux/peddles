@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Photos: Codable, Hashable{
+struct Photos: Codable, Hashable {
     var small: String
     var medium: String
     var large: String
@@ -21,7 +21,7 @@ extension Photos {
         medium: String = "https://photos.petfinder.com/photos/pets/124/1/?bust=1546042081&width=300",
         large: String = "https://photos.petfinder.com/photos/pets/124/1/?bust=1546042081&width=600",
         full: String = "https://photos.petfinder.com/photos/pets/124/1/?bust=1546042081"
-    ) -> Self{
+    ) -> Self {
         Self(small: small, medium: medium, large: large, full: full)
     }
 }

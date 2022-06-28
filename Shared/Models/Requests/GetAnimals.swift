@@ -9,9 +9,9 @@ import Foundation
 
 struct GetAnimals: Request {
     typealias ReturnType = Animals
-    
+
     let method: HTTPMethod = .get
-    var queryParams: [String : String]?
+    var queryParams: [String: String]?
     var path: String {
         "animals"
     }

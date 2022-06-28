@@ -11,22 +11,22 @@ struct ContentView: View {
     @StateObject var viewModel = MapViewModel(client: DefaultAPIClient.shared)
     @StateObject var animalsVM = AnimalsViewModel(client: DefaultAPIClient.shared)
     @StateObject var location = LocationManager()
-    
+
     let timer = Timer.publish(every: 2, on: .main, in: .common).autoconnect()
-    
+
     var body: some View {
-        NavigationView{
+        NavigationView {
             ZStack {
                 MapView(location: location, viewModel: viewModel)
                     .edgesIgnoringSafeArea(.all)
             }
-            //Todo: put this in the view model and use somthing beter than a timer
-            .onReceive(timer) { time in
-                if viewModel.token != nil{
-                    if !viewModel.state.organizationAnnotations.isEmpty{
+            // Todo: put this in the view model and use somthing beter than a timer
+            .onReceive(timer) { _ in
+                if viewModel.token != nil {
+                    if !viewModel.state.organizationAnnotations.isEmpty {
                         timer.upstream.connect().cancel()
-                    }else{
-                        viewModel.fetchOrgsInArea(longLat:"\(location.currentRegion.center.latitude), \(location.currentRegion.center.longitude)")
+                    } else {
+                        viewModel.fetchOrgsInArea(longLat: "\(location.currentRegion.center.latitude), \(location.currentRegion.center.longitude)")
                     }
                 }
             }

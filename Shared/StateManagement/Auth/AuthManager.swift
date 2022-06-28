@@ -13,12 +13,12 @@ class AuthManager: ObservableObject {
     @AppStorage("token") var token: String?
     private let client: APIClient
     private var cancellables = Set<AnyCancellable>()
-    
+
     init(client: APIClient) {
         self.client = client
         self.getToken()
     }
-    
+
     func getToken() {
         client
             .dispatch(GetTokenRequest())
@@ -34,5 +34,5 @@ class AuthManager: ObservableObject {
             }
             .store(in: &cancellables)
     }
-    
+
 }

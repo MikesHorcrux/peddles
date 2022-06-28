@@ -4,18 +4,18 @@ import Combine
 struct NetworkDispatcher {
     private let urlSession: URLSession
     private let logger: NetworkingLogger
-    
+
     public init(urlSession: URLSession = .shared, logger: NetworkingLogger = .init()) {
         self.urlSession = urlSession
         self.logger = logger
     }
-    
+
     /// Dispatches an URLRequest and returns a publisher
     /// - Parameter request: URLRequest
     /// - Returns: A publisher with the provided decoded data or an error
     func dispatch<ReturnType: Codable>(request: URLRequest) -> AnyPublisher<ReturnType, NetworkRequestError> {
         logger.log(request)
-        
+
         return urlSession
             .dataTaskPublisher(for: request)
             .tryMap { data, response in
@@ -69,7 +69,7 @@ extension NetworkDispatcher {
             return .unknownError
         }
     }
-    
+
     private func parseError( from json: Data?) -> DetailedNetworkRequestError? {
         guard let json = json else { return nil }
         return try? JSONDecoder().decode(DetailedNetworkRequestError.self, from: json)

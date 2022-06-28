@@ -11,7 +11,7 @@ public enum HTTPMethod: String {
 
 protocol Request {
     associatedtype ReturnType: Codable
-    
+
     var path: String { get }
     var method: HTTPMethod { get }
     var contentType: String { get }
@@ -54,7 +54,7 @@ extension Request {
         }
         return httpBody
     }
-    
+
     /// Transforms an Request into a standard URL request
     /// - Parameter baseURL: API Base URL to be used
     /// - Parameter sharedHeaders: Additional Headers to add to the request
@@ -68,12 +68,12 @@ extension Request {
         print(request)
         return request
     }
-    
+
     private func url(baseURL: String) -> URL? {
         guard var urlComponents = URLComponents(string: baseURL) else { return nil }
-        
+
         urlComponents.path = "\(urlComponents.path)/\(path)/"
-        
+
         queryParams?.forEach { key, value in
             let item = URLQueryItem(name: key, value: value)
             if urlComponents.queryItems == nil {
@@ -82,7 +82,7 @@ extension Request {
                 urlComponents.queryItems?.append(item)
             }
         }
-        
+
         return urlComponents.url
     }
 }

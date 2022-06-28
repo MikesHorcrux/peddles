@@ -6,7 +6,7 @@
 //
 import Foundation
 
-struct GetTokenRequest: Request{
+struct GetTokenRequest: Request {
     typealias ReturnType = Token
 
     let path = "oauth2/token"

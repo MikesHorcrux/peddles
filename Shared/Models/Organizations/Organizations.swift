@@ -12,7 +12,7 @@ struct Organizations: Codable, Hashable {
 }
 
 #if DEBUG
-extension Organizations{
+extension Organizations {
     static func create(organizations: [Organization] = [.create()]) -> Self {
         Self(organizations: organizations)
     }

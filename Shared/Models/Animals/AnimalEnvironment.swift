@@ -7,12 +7,11 @@
 
 import Foundation
 
-struct AnimalEnvironment: Codable{
+struct AnimalEnvironment: Codable {
     var children: Bool?
     var dogs: Bool?
     var cats: Bool?
 }
-
 
 #if DEBUG
 extension AnimalEnvironment {

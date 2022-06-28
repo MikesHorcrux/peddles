@@ -15,16 +15,16 @@ struct OrganizationView: View {
         VStack {
             AdoptableAnimalsView(animalsViewModel: animalsViewModel)
             Divider()
-            
+
             MissionStatementView(missionStatement: orgViewModel.state.orgainization?.missionStatement)
-            HStack(alignment: .top){
+            HStack(alignment: .top) {
                 AddressView(org: orgViewModel.state.orgainization?.address)
                 ContactView(phone: orgViewModel.state.orgainization?.phone ?? "unknown", email: orgViewModel.state.orgainization?.email ?? "unknown")
             }
             .padding()
             Spacer()
         }
-        .onAppear{
+        .onAppear {
             orgViewModel.fetchOrganization(id: orgId)
             animalsViewModel.fetchAnimalsByOrg(id: orgId)
         }
@@ -38,7 +38,7 @@ struct OrganizationView_Previews: PreviewProvider {
     static var previews: some View {
         var orgViewModel = OrganizationsViewModel(client: InMemoryAPIClient())
         OrganizationView(orgId: "")
-            .onAppear{
+            .onAppear {
                 orgViewModel.state.orgainization = .create()
             }
     }

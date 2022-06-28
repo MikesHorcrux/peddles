@@ -10,19 +10,19 @@ import SwiftUI
 struct MissionStatementView: View {
     var missionStatement: String?
     var body: some View {
-        VStack(alignment: .leading, spacing: 20){
-            if missionStatement != nil{
-                
+        VStack(alignment: .leading, spacing: 20) {
+            if missionStatement != nil {
+
                 Text("Our Mission: ")
                     .font(.subheadline)
                     .bold()
-                
+
                 Text(missionStatement ?? "")
                     .padding(.leading, 15)
                     .font(.body)
                     .multilineTextAlignment(.leading)
-                
-            } else{
+
+            } else {
                 EmptyView()
             }
         }
