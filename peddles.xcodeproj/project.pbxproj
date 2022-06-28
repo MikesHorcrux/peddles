@@ -293,8 +293,9 @@
 		550CA3232867F965004D555A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				559133AC28692C88006D7750 /* Organization */,
+				558F5E4D28655EA000365B05 /* ContentView.swift */,
 				550CA3262867F98B004D555A /* Map.swift */,
+				559133AC28692C88006D7750 /* Organization */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -317,7 +318,6 @@
 				558F5E83286565E600365B05 /* Extentions */,
 				558F5E82286564EC00365B05 /* Networking */,
 				558F5E4C28655EA000365B05 /* peddlesApp.swift */,
-				558F5E4D28655EA000365B05 /* ContentView.swift */,
 				558F5E4E28655EA000365B05 /* Assets.xcassets */,
 			);
 			path = Shared;

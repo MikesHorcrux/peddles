@@ -23,7 +23,6 @@ struct MapView: View {
             userTrackingMode: $trackingMode,
             annotationItems: viewModel.state.organizationAnnotations
         ) { item in
-            //MapPin(coordinate: item.latlong)
             MapAnnotation(coordinate: item.latlong) {
                 NavigationLink(destination: {
                     OrganizationView(orgId: item.id)
@@ -54,7 +53,6 @@ struct MapView: View {
         )
         .clipShape(Circle())
         .frame(width: 60, height: 60)
-        //.opacity(1)
     }
 }
 

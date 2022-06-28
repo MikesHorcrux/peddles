@@ -39,11 +39,11 @@ class MapViewModel: ObservableObject {
             .store(in: &cancellables)
     }
     
-    func fetchOrgsInArea(zipCode: String) {
+    func fetchOrgsInArea(longLat: String) {
         client
             .dispatch(GetAllOrgs(queryParams:
                                     [
-                                        "location": zipCode,
+                                        "location": longLat,
                                         "limit": "100"
                                     ]))
             .receive(on: DispatchQueue.main)
@@ -67,6 +67,7 @@ class MapViewModel: ObservableObject {
             .store(in: &cancellables)
     }
     
+    //Todo: convert to async await 
     private func getCoordinate( addressString : String,
                                 completionHandler: @escaping(CLLocationCoordinate2D, NSError?) -> Void ) {
         let geocoder = CLGeocoder()
