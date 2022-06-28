@@ -12,9 +12,9 @@ struct AddressView: View {
     var org: PFAddress?
 
     var body: some View {
-        LazyVStack(alignment: .leading, spacing: 5){
+        VStack(alignment: .leading, spacing: 5){
             if let org = org{
-                Text("Where we are Located: ")
+                Text("Our location: ")
                     .font(.headline)
                     .padding(.vertical)
                 VStack(alignment: .leading){
@@ -32,6 +32,7 @@ struct AddressView: View {
             }
         }
     }
+    
 }
 
 #if DEBUG

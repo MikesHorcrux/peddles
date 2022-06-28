@@ -13,10 +13,16 @@ struct OrganizationView: View {
     var orgId: String
     var body: some View {
         VStack {
-            AdoptableAnimalsView(animals: animalsViewModel.state.animals)
-            MissionStatementView(missionStatement: orgViewModel.state.orgainization?.missionStatement)
-            AddressView(org: orgViewModel.state.orgainization?.address)
+            AdoptableAnimalsView(animalsViewModel: animalsViewModel)
+            Divider()
             
+            MissionStatementView(missionStatement: orgViewModel.state.orgainization?.missionStatement)
+            HStack(alignment: .top){
+                AddressView(org: orgViewModel.state.orgainization?.address)
+                ContactView(phone: orgViewModel.state.orgainization?.phone ?? "unknown", email: orgViewModel.state.orgainization?.email ?? "unknown")
+            }
+            .padding()
+            Spacer()
         }
         .onAppear{
             orgViewModel.fetchOrganization(id: orgId)

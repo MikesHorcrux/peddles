@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AdoptableAnimalsView: View {
-    var animals: [Animal]
+    @ObservedObject var animalsViewModel: AnimalsViewModel
     let columns = [
            GridItem(.adaptive(minimum: 100))
        ]
@@ -17,21 +17,36 @@ struct AdoptableAnimalsView: View {
             Text("Meet our adoptable peddles")
                 .font(.headline)
                 .padding()
-            ScrollView {
-                        LazyVGrid(columns: columns) {
-                            ForEach(animals) { item in
-                                AnimalPhoto(img: item.photos.first?.full ?? "")
-                            }
+            if !animalsViewModel.state.animals.isEmpty {
+                ScrollView {
+                    LazyVGrid(columns: columns) {
+                        ForEach(animalsViewModel.state.animals) { item in
+                            AnimalPhoto(img: item.photos.first?.full ?? "")
                         }
-                        .padding(.horizontal)
                     }
-            .frame(maxHeight: 300)
+                    .padding(.horizontal)
+                }
+                .frame(maxHeight: 400)
+            } else {
+                VStack{
+                    Text("sorry all of our animals have homes")
+                    Text("🐶🐰🐱")
+                }
+                .padding()
+                .font(.title)
+                .frame(height: 400)
+            }
+            
         }
     }
 }
 
+#if DEBUG
 struct AdoptableAnimalsView_Previews: PreviewProvider {
+    
     static var previews: some View {
-        AdoptableAnimalsView(animals: [Animal.create()])
+        let viewModel = AnimalsViewModel(client: InMemoryAPIClient())
+        AdoptableAnimalsView(animalsViewModel: viewModel)
     }
 }
+#endif

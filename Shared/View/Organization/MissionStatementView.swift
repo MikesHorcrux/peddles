@@ -10,7 +10,7 @@ import SwiftUI
 struct MissionStatementView: View {
     var missionStatement: String?
     var body: some View {
-        LazyVStack(alignment: .leading, spacing: 20){
+        VStack(alignment: .leading, spacing: 20){
             if missionStatement != nil{
                 
             Text("Our Mission: ")
@@ -20,6 +20,7 @@ struct MissionStatementView: View {
             Text(missionStatement ?? "")
                     .padding(.leading, 15)
                     .font(.body)
+                    .multilineTextAlignment(.leading)
                 
             } else{
             EmptyView()
