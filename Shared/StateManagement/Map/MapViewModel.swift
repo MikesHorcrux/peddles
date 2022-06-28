@@ -52,6 +52,8 @@ class MapViewModel: ObservableObject {
                 }
                 // todo: add error handling
                 self?.state.error = error.identifiable
+                print(error.identifiable)
+                self?.fetchOrgsInArea(longLat: longLat)
             } receiveValue: { [weak self] response in
                 self?.state.organizations = response
                 self?.state.organizationAnnotations.removeAll()
