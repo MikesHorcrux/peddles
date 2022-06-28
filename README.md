@@ -3,6 +3,21 @@
 
 peddles is an app that gives users to find local pets looking to be adopted. The app is called peddles because everyone wants pet cuddles 😂. 
 
+## Roadmap
+
+Next few tasks needed:
+
+- Add Animals page
+
+- Add ability to call shelter
+
+- Ability to get map directions 
+
+- Work on design 
+
+
+
+
 ## Tech Stack
 
 **Client:** SwiftUI, Combine, Swift
@@ -26,7 +41,7 @@ Please adhere to this project's `code of conduct`.
 
 ## Support
 
-For support, email mike@justbearded.com 
+For support, email fake@fake.com or join our Slack channel.
 
 
 ## License
