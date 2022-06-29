@@ -37,7 +37,23 @@ class MapViewModel: ObservableObject {
             }
             .store(in: &cancellables)
     }
-
+    
+    func fetchOrganization(id: String) {
+        client
+            .dispatch(GetOrg(id: id))
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] completion in
+                guard case .failure(let error) = completion else {
+                    return
+                }
+                // todo: add error handling
+                self?.state.error = error.identifiable
+            } receiveValue: { [weak self] org in
+                self?.state.orgainization = org.organization
+            }
+            .store(in: &cancellables)
+    }
+    
     func fetchOrgsInArea(longLat: String) {
         client
             .dispatch(GetAllOrgs(queryParams:
@@ -52,15 +68,22 @@ class MapViewModel: ObservableObject {
                 }
                 // todo: add error handling
                 self?.state.error = error.identifiable
+                print(error.identifiable)
+                self?.fetchOrgsInArea(longLat: longLat)
             } receiveValue: { [weak self] response in
                 self?.state.organizations = response
                 self?.state.organizationAnnotations.removeAll()
                 for org in response.organizations {
-                    let address = (org.address.address1 ?? "") + " " + (org.address.address2 ?? "") + " " + "\(org.address.city) \(org.address.state) \(org.address.postcode) "
-                    self?.getCoordinate(addressString: address, completionHandler: { coord, _ in
-                        let annotation = AnnotationModel(id: org.id, img: org.photos?.first?.small ?? "", latlong: coord)
-                        self?.state.organizationAnnotations.append(annotation)
-                    })
+                    guard org.photos?.first?.small == nil else {
+                        let address = (org.address.address1 ?? "") + " " + (org.address.address2 ?? "") + " " + "\(org.address.city) \(org.address.state) \(org.address.postcode) "
+                                           self?.getCoordinate(addressString: address, completionHandler: { coord, _ in
+                                               let annotation = AnnotationModel(id: org.id, img: org.photos?.first?.small ?? "", latlong: coord)
+                                               self?.state.organizationAnnotations.append(annotation)
+                                           })
+                        continue
+
+                    }
+                   
                 }
             }
             .store(in: &cancellables)

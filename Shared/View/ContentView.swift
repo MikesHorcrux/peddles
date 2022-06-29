@@ -31,7 +31,6 @@ struct ContentView: View {
                 }
             }
         }
-        .navigationViewStyle(.automatic)
     }
 }
 

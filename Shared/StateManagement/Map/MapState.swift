@@ -15,4 +15,5 @@ struct MapState: Equatable {
     var error: IdentifiableError?
     var organizationAnnotations: [AnnotationModel] = []
     var organizations: Organizations?
+    var orgainization: Organization?
 }

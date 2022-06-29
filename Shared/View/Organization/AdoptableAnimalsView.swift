@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AdoptableAnimalsView: View {
-    @ObservedObject var animalsViewModel: AnimalsViewModel
+    @StateObject var animalsViewModel: AnimalsViewModel
     let columns = [
         GridItem(.adaptive(minimum: 100))
     ]

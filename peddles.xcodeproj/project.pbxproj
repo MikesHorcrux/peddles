@@ -95,10 +95,6 @@
 		559133AB28692B6A006D7750 /* AnimalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559133A928692B6A006D7750 /* AnimalState.swift */; };
 		559133AE28692CA2006D7750 /* OrganizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559133AD28692CA2006D7750 /* OrganizationView.swift */; };
 		559133AF28692CA2006D7750 /* OrganizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559133AD28692CA2006D7750 /* OrganizationView.swift */; };
-		559133B228692D36006D7750 /* OrganizationsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559133B128692D36006D7750 /* OrganizationsState.swift */; };
-		559133B328692D36006D7750 /* OrganizationsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559133B128692D36006D7750 /* OrganizationsState.swift */; };
-		559133B528692D68006D7750 /* OrganizationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559133B428692D68006D7750 /* OrganizationsViewModel.swift */; };
-		559133B628692D68006D7750 /* OrganizationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559133B428692D68006D7750 /* OrganizationsViewModel.swift */; };
 		559133B828692E19006D7750 /* GetOrg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559133B728692E19006D7750 /* GetOrg.swift */; };
 		559133B928692E19006D7750 /* GetOrg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559133B728692E19006D7750 /* GetOrg.swift */; };
 		5591D506286A858600FDA214 /* ContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5591D505286A858600FDA214 /* ContactView.swift */; };
@@ -163,8 +159,6 @@
 		559133A628681E7F006D7750 /* AnnotationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationModel.swift; sourceTree = "<group>"; };
 		559133A928692B6A006D7750 /* AnimalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalState.swift; sourceTree = "<group>"; };
 		559133AD28692CA2006D7750 /* OrganizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationView.swift; sourceTree = "<group>"; };
-		559133B128692D36006D7750 /* OrganizationsState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationsState.swift; sourceTree = "<group>"; };
-		559133B428692D68006D7750 /* OrganizationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationsViewModel.swift; sourceTree = "<group>"; };
 		559133B728692E19006D7750 /* GetOrg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetOrg.swift; sourceTree = "<group>"; };
 		5591D505286A858600FDA214 /* ContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactView.swift; sourceTree = "<group>"; };
 		5598F3A5286A3418006719B7 /* AddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressView.swift; sourceTree = "<group>"; };
@@ -217,7 +211,6 @@
 		550CA2DA28678030004D555A /* StateManagement */ = {
 			isa = PBXGroup;
 			children = (
-				559133B028692D1C006D7750 /* Organizations */,
 				550CA3172867C1C0004D555A /* Map */,
 				550CA2F92867AD3B004D555A /* Animals */,
 				550CA2DB28678047004D555A /* Auth */,
@@ -389,15 +382,6 @@
 			path = Organization;
 			sourceTree = "<group>";
 		};
-		559133B028692D1C006D7750 /* Organizations */ = {
-			isa = PBXGroup;
-			children = (
-				559133B128692D36006D7750 /* OrganizationsState.swift */,
-				559133B428692D68006D7750 /* OrganizationsViewModel.swift */,
-			);
-			path = Organizations;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -536,7 +520,6 @@
 				558F5E5E28655EA000365B05 /* ContentView.swift in Sources */,
 				558F5E76286564E400365B05 /* APIClient.swift in Sources */,
 				550CA2DD28678063004D555A /* AuthManager.swift in Sources */,
-				559133B228692D36006D7750 /* OrganizationsState.swift in Sources */,
 				550CA2E928679B38004D555A /* AnimalColors.swift in Sources */,
 				550CA2ED2867A2FA004D555A /* AnimalAttributes.swift in Sources */,
 				550CA31C2867C2B3004D555A /* MapState.swift in Sources */,
@@ -553,7 +536,6 @@
 				558F5E942865660C00365B05 /* Array+extention.swift in Sources */,
 				558F5E7E286564E400365B05 /* EnvironmentValues+APIClient.swift in Sources */,
 				559133A728681E7F006D7750 /* AnnotationModel.swift in Sources */,
-				559133B528692D68006D7750 /* OrganizationsViewModel.swift in Sources */,
 				550CA2F12867A5F3004D555A /* AnimalContact.swift in Sources */,
 				558F5E8E2865660C00365B05 /* Dictionary+extension.swift in Sources */,
 				558F5E5C28655EA000365B05 /* peddlesApp.swift in Sources */,
@@ -595,7 +577,6 @@
 				559133A42867FAFE006D7750 /* LocationManager.swift in Sources */,
 				558F5E932865660C00365B05 /* URLRequest+extension.swift in Sources */,
 				558F5E5F28655EA000365B05 /* ContentView.swift in Sources */,
-				559133B328692D36006D7750 /* OrganizationsState.swift in Sources */,
 				550CA2FC2867B9FE004D555A /* AnimalAttributes.swift in Sources */,
 				558F5E77286564E400365B05 /* APIClient.swift in Sources */,
 				550CA31D2867C2B3004D555A /* MapState.swift in Sources */,
@@ -612,7 +593,6 @@
 				558F5E7F286564E400365B05 /* EnvironmentValues+APIClient.swift in Sources */,
 				550CA2FE2867B9FE004D555A /* Animals.swift in Sources */,
 				559133A828681FDE006D7750 /* AnnotationModel.swift in Sources */,
-				559133B628692D68006D7750 /* OrganizationsViewModel.swift in Sources */,
 				558F5E8F2865660C00365B05 /* Dictionary+extension.swift in Sources */,
 				558F5E5D28655EA000365B05 /* peddlesApp.swift in Sources */,
 				559133A32867FAF4006D7750 /* Map.swift in Sources */,
@@ -685,6 +665,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -737,6 +719,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -758,6 +742,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
@@ -771,7 +756,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -789,6 +774,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
@@ -802,7 +788,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
