@@ -301,6 +301,7 @@
 		558F5E4628655E9F00365B05 = {
 			isa = PBXGroup;
 			children = (
+				558D9E87286F5C460067D041 /* peddles--iOS--Info.plist */,
 				558F5E4B28655EA000365B05 /* Shared */,
 				558F5E5A28655EA000365B05 /* macOS */,
 				558F5E5428655EA000365B05 /* Products */,
@@ -317,7 +318,6 @@
 				558F5E82286564EC00365B05 /* Networking */,
 				558F5E4C28655EA000365B05 /* peddlesApp.swift */,
 				558F5E4E28655EA000365B05 /* Assets.xcassets */,
-				558D9E87286F5C460067D041 /* peddles--iOS--Info.plist */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
