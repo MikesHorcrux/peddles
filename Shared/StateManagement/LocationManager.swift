@@ -77,6 +77,6 @@ extension LocationManager: CLLocationManagerDelegate {
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         usersLocation = locations.last ?? .init()
-        currentRegion = MKCoordinateRegion(center: usersLocation.coordinate, latitudinalMeters: 1000, longitudinalMeters: 1000)
+        currentRegion = MKCoordinateRegion(center: usersLocation.coordinate, latitudinalMeters: 100000, longitudinalMeters: 100000)
     }
 }

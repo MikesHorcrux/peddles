@@ -11,28 +11,20 @@ struct OrganizationView: View {
     @ObservedObject var animalsViewModel = AnimalsViewModel(client: DefaultAPIClient.shared)
     @ObservedObject var orgViewModel: MapViewModel
     @State var org: Organization?
-    var orgId: String
+    var orgLocation: AnnotationModel?
+    
     var body: some View {
-        VStack {
-           AdoptableAnimalsView(animalsViewModel: animalsViewModel)
-            Divider()
-            if let org = org {
-            MissionStatementView(missionStatement: org.missionStatement)
-            HStack(alignment: .top) {
-                AddressView(org: org.address)
-                ContactView(phone: org.phone ?? "unknown", email: org.email ?? "unknown")
-            }
-            .padding()
-            Spacer()
-            }
+        ScrollView {
+            OrganizationInfoView(org: org, location: orgLocation)
+            AdoptableAnimalsView(animalsViewModel: animalsViewModel)
         }
         .onAppear {
-           animalsViewModel.fetchAnimalsByOrg(id: orgId)
+            animalsViewModel.fetchAnimalsByOrg(id: orgLocation?.id ?? "")
             self.org = orgViewModel.state.organizations?.organizations.first(where: { item in
-                item.id == orgId
+                item.id == orgLocation?.id ?? ""
             })
         }
-        .navigationTitle(orgViewModel.state.orgainization?.name ?? "")
+        .navigationTitle(org?.name ?? "")
         .navigationBarTitleDisplayMode(.inline)
     }
 }
@@ -41,7 +33,7 @@ struct OrganizationView: View {
 struct OrganizationView_Previews: PreviewProvider {
     static var previews: some View {
         var orgViewModel = MapViewModel(client: InMemoryAPIClient())
-        OrganizationView(orgViewModel: orgViewModel, orgId: "")
+        OrganizationView(orgViewModel: orgViewModel)
     }
 }
 #endif

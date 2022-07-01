@@ -13,23 +13,17 @@ struct ContactView: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text("Contact info:")
-                .font(.headline)
                 .padding(.vertical)
             HStack {
                 Image(systemName: "phone.circle")
-                    .font(.callout)
                 Text(phone)
-                    .font(.callout)
             }
-            .padding(.leading)
             HStack {
                 Image(systemName: "mail")
-                    .font(.callout)
                 Text(email)
-                    .font(.callout)
             }
-            .padding(.leading)
         }
+        .font(.caption)
     }
 }
 
