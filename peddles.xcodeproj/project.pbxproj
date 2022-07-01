@@ -138,6 +138,7 @@
 		550CA31B2867C2B3004D555A /* MapState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapState.swift; sourceTree = "<group>"; };
 		550CA3212867DF35004D555A /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocationManager.swift; path = ../LocationManager.swift; sourceTree = "<group>"; };
 		550CA3262867F98B004D555A /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
+		558D9E87286F5C460067D041 /* peddles--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "peddles--iOS--Info.plist"; sourceTree = "<group>"; };
 		558F5E4C28655EA000365B05 /* peddlesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = peddlesApp.swift; sourceTree = "<group>"; };
 		558F5E4D28655EA000365B05 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		558F5E4E28655EA000365B05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -300,6 +301,7 @@
 		558F5E4628655E9F00365B05 = {
 			isa = PBXGroup;
 			children = (
+				558D9E87286F5C460067D041 /* peddles--iOS--Info.plist */,
 				558F5E4B28655EA000365B05 /* Shared */,
 				558F5E5A28655EA000365B05 /* macOS */,
 				558F5E5428655EA000365B05 /* Products */,
@@ -744,6 +746,7 @@
 				DEVELOPMENT_TEAM = 5V5PZUN2HG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "peddles--iOS--Info.plist";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Location is used to find pets near you and map services";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -776,6 +779,7 @@
 				DEVELOPMENT_TEAM = 5V5PZUN2HG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "peddles--iOS--Info.plist";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Location is used to find pets near you and map services";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
