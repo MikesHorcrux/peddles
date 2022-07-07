@@ -53,6 +53,8 @@
 		550CA31D2867C2B3004D555A /* MapState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550CA31B2867C2B3004D555A /* MapState.swift */; };
 		550CA3222867DF35004D555A /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550CA3212867DF35004D555A /* LocationManager.swift */; };
 		550CA3272867F98B004D555A /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550CA3262867F98B004D555A /* Map.swift */; };
+		551B4D4928778E530095B5ED /* AnimalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551B4D4828778E530095B5ED /* AnimalView.swift */; };
+		551B4D4A28778E530095B5ED /* AnimalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551B4D4828778E530095B5ED /* AnimalView.swift */; };
 		558F5E5C28655EA000365B05 /* peddlesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558F5E4C28655EA000365B05 /* peddlesApp.swift */; };
 		558F5E5D28655EA000365B05 /* peddlesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558F5E4C28655EA000365B05 /* peddlesApp.swift */; };
 		558F5E5E28655EA000365B05 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558F5E4D28655EA000365B05 /* ContentView.swift */; };
@@ -138,6 +140,7 @@
 		550CA31B2867C2B3004D555A /* MapState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapState.swift; sourceTree = "<group>"; };
 		550CA3212867DF35004D555A /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocationManager.swift; path = ../LocationManager.swift; sourceTree = "<group>"; };
 		550CA3262867F98B004D555A /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
+		551B4D4828778E530095B5ED /* AnimalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalView.swift; sourceTree = "<group>"; };
 		558D9E87286F5C460067D041 /* peddles--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "peddles--iOS--Info.plist"; sourceTree = "<group>"; };
 		558F5E4C28655EA000365B05 /* peddlesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = peddlesApp.swift; sourceTree = "<group>"; };
 		558F5E4D28655EA000365B05 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -294,6 +297,7 @@
 				550CA3262867F98B004D555A /* Map.swift */,
 				559133AC28692C88006D7750 /* Organization */,
 				55D686C8286E2639003C0C3C /* AnimalCard.swift */,
+				551B4D4828778E530095B5ED /* AnimalView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -532,6 +536,7 @@
 				550CA31C2867C2B3004D555A /* MapState.swift in Sources */,
 				558F5E7A286564E400365B05 /* Request.swift in Sources */,
 				55EBC0F728693DBF00859AEF /* SingleOrganization.swift in Sources */,
+				551B4D4928778E530095B5ED /* AnimalView.swift in Sources */,
 				550CA2D928677FB5004D555A /* ClientSecrets.swift in Sources */,
 				550CA2FB2867AD64004D555A /* AnimalsViewModel.swift in Sources */,
 				550CA3192867C1D7004D555A /* MapViewModel.swift in Sources */,
@@ -590,6 +595,7 @@
 				550CA31D2867C2B3004D555A /* MapState.swift in Sources */,
 				550CA2DE286782A6004D555A /* AuthManager.swift in Sources */,
 				55EBC0F828693DBF00859AEF /* SingleOrganization.swift in Sources */,
+				551B4D4A28778E530095B5ED /* AnimalView.swift in Sources */,
 				550CA3042867B9FE004D555A /* AnimalContact.swift in Sources */,
 				550CA3062867BA18004D555A /* AnimalsViewModel.swift in Sources */,
 				550CA31A2867C1D7004D555A /* MapViewModel.swift in Sources */,

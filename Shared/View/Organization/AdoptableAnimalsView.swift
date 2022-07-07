@@ -17,13 +17,19 @@ struct AdoptableAnimalsView: View {
             if !animalsViewModel.state.animals.isEmpty {
                 ScrollView {
                     ForEach(animalsViewModel.state.animals) { animal in
-                        AnimalCard(
-                            img: animal.photos.first?.medium ?? "",
-                            name: animal.name ,
-                            breed: animal.breeds.primary ,
-                            animalType: animal.type ,
-                            color: animal.colors.primary ?? "",
-                            description: animal.description ?? "")
+                        NavigationLink {
+                            AnimalView(viewModel: animalsViewModel)
+                        } label: {
+                            AnimalCard(
+                                                        img: animal.photos.first?.medium ?? "",
+                                                        name: animal.name ,
+                                                        breed: animal.breeds.primary ,
+                                                        animalType: animal.type ,
+                                                        color: animal.colors.primary ?? "",
+                                                        description: animal.description ?? "")
+                        }
+
+                        
                     }
                 }
             } else {
