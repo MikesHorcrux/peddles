@@ -35,6 +35,22 @@ class AnimalsViewModel: ObservableObject {
             .store(in: &cancellables)
     }
     
+    func fetchAnimal(id: Int) {
+        client
+            .dispatch(GetAnimal(id: id))
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] completion in
+                guard case .failure(let error) = completion else {
+                    print(completion)
+                    return
+                }
+                // todo: add error handling
+                self?.state.error = error.identifiable
+            } receiveValue: { [weak self] animals in
+                self?.state.animal = animals.animal
+            }
+            .store(in: &cancellables)
+    }
 
     func fetchAnimalsByOrg(id: String) {
         client

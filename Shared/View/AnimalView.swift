@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AnimalView: View {
     @ObservedObject var viewModel: AnimalsViewModel
-    var animalId: String
+    var animalId: Int
     var body: some View {
         ScrollView{
             HStack {
@@ -60,7 +60,7 @@ struct AnimalView: View {
                 .padding()
         }
         .onAppear{
-            viewModel.fetchAnimal(id: animalID)
+            viewModel.fetchAnimal(id: animalId)
         }
     }
     
@@ -85,7 +85,7 @@ struct AnimalView: View {
 struct AnimalView_Previews: PreviewProvider {
     static var previews: some View {
         let viewModel = AnimalsViewModel(client: InMemoryAPIClient())
-        AnimalView(viewModel: viewModel, animalId: "")
+        AnimalView(viewModel: viewModel, animalId: 000)
             .onAppear{
                 viewModel.state.animal = .create()
             }

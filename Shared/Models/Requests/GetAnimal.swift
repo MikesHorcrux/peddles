@@ -10,7 +10,7 @@ import Foundation
 struct GetAnimal: Request {
     typealias ReturnType = SingleAnimal
 
-    let id: String
+    let id: Int
     let method: HTTPMethod = .get
     var queryParams: [String: String]?
     var path: String {
