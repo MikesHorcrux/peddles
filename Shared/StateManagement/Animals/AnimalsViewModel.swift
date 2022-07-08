@@ -34,6 +34,7 @@ class AnimalsViewModel: ObservableObject {
             }
             .store(in: &cancellables)
     }
+    
 
     func fetchAnimalsByOrg(id: String) {
         client
