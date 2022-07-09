@@ -25,7 +25,7 @@ struct ContentView: View {
                     .foregroundColor(.teal)
                     .font(.title)
                     .fontWeight(.heavy)
-                    .padding(.top, -35)
+                    .padding(.top, -55)
 
             }
             .bottomSheet(isPresented: $showSheet, height: 800) {
