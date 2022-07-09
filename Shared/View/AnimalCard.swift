@@ -39,6 +39,8 @@ struct AnimalCard: View {
                     .lineLimit(3)
             }
         }
+        .multilineTextAlignment(.leading)
+        .foregroundColor(.primary)
         .padding()
         .background(Color("ColorCard"))
         .clipShape(

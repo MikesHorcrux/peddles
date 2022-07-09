@@ -61,6 +61,7 @@
 		551B4D502878B60A0095B5ED /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551B4D4E2878B60A0095B5ED /* File.swift */; };
 		551B4D522878B62C0095B5ED /* GetAnimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551B4D512878B62C0095B5ED /* GetAnimal.swift */; };
 		551B4D532878B62C0095B5ED /* GetAnimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551B4D512878B62C0095B5ED /* GetAnimal.swift */; };
+		5535CCC62879FA6700CFC1FB /* BottomSheet in Frameworks */ = {isa = PBXBuildFile; productRef = 5535CCC52879FA6700CFC1FB /* BottomSheet */; };
 		558F5E5C28655EA000365B05 /* peddlesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558F5E4C28655EA000365B05 /* peddlesApp.swift */; };
 		558F5E5D28655EA000365B05 /* peddlesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558F5E4C28655EA000365B05 /* peddlesApp.swift */; };
 		558F5E5E28655EA000365B05 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558F5E4D28655EA000365B05 /* ContentView.swift */; };
@@ -189,6 +190,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5535CCC62879FA6700CFC1FB /* BottomSheet in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,6 +423,9 @@
 			dependencies = (
 			);
 			name = "peddles (iOS)";
+			packageProductDependencies = (
+				5535CCC52879FA6700CFC1FB /* BottomSheet */,
+			);
 			productName = "peddles (iOS)";
 			productReference = 558F5E5328655EA000365B05 /* peddles.app */;
 			productType = "com.apple.product-type.application";
@@ -469,6 +474,9 @@
 				Base,
 			);
 			mainGroup = 558F5E4628655E9F00365B05;
+			packageReferences = (
+				5535CCC42879FA6700CFC1FB /* XCRemoteSwiftPackageReference "bottom-sheet" */,
+			);
 			productRefGroup = 558F5E5428655EA000365B05 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -914,6 +922,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5535CCC42879FA6700CFC1FB /* XCRemoteSwiftPackageReference "bottom-sheet" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/weitieda/bottom-sheet";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5535CCC52879FA6700CFC1FB /* BottomSheet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5535CCC42879FA6700CFC1FB /* XCRemoteSwiftPackageReference "bottom-sheet" */;
+			productName = BottomSheet;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 558F5E4728655E9F00365B05 /* Project object */;
 }

@@ -6,20 +6,41 @@
 //
 
 import SwiftUI
+import BottomSheet
 
 struct ContentView: View {
     @StateObject var viewModel = MapViewModel(client: DefaultAPIClient.shared)
     @StateObject var animalsVM = AnimalsViewModel(client: DefaultAPIClient.shared)
     @StateObject var location = LocationManager()
+    @State private var showSheet: Bool = false
 
     let timer = Timer.publish(every: 2, on: .main, in: .common).autoconnect()
 
     var body: some View {
         NavigationView {
-            ZStack {
+            ZStack(alignment: .top){
                 MapView(location: location, viewModel: viewModel)
                     .edgesIgnoringSafeArea(.all)
+                Text("peddles")
+                    .foregroundColor(.teal)
+                    .font(.title)
+                    .fontWeight(.heavy)
+                    .padding(.top, -35)
+                    
             }
+            .bottomSheet(isPresented: $showSheet, height: 800){
+                AdoptableAnimalsView(animalsViewModel: animalsVM)
+            }
+            .navigationBarItems(trailing:  Button {
+                showSheet.toggle()
+            } label: {
+                ZStack{
+                    Circle()
+                        .frame(width: 65)
+                        .foregroundColor(.secondary)
+                    Text("🐶")
+                }
+            })
             // Todo: put this in the view model and use somthing beter than a timer
             .onReceive(timer) { _ in
                 if viewModel.token != nil {
@@ -27,6 +48,7 @@ struct ContentView: View {
                         timer.upstream.connect().cancel()
                     } else {
                         viewModel.fetchOrgsInArea(longLat: "\(location.currentRegion.center.latitude), \(location.currentRegion.center.longitude)")
+                        animalsVM.fetchAnimals(zipcode: "\(location.currentRegion.center.latitude), \(location.currentRegion.center.longitude)")
                     }
                 }
             }

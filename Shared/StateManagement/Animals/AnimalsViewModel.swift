@@ -18,9 +18,13 @@ class AnimalsViewModel: ObservableObject {
         self.client = client
     }
 
-    func fetchAnimals() {
+    func fetchAnimals(zipcode: String) {
         client
-            .dispatch(GetAnimals())
+            .dispatch(GetAnimals(queryParams:
+                                    [
+                                        "location": zipcode,
+                                        "limit": "100"
+                                    ]))
             .receive(on: DispatchQueue.main)
             .sink { [weak self] completion in
                 guard case .failure(let error) = completion else {
@@ -30,7 +34,10 @@ class AnimalsViewModel: ObservableObject {
                 // todo: add error handling
                 self?.state.error = error.identifiable
             } receiveValue: { [weak self] animals in
-                self?.state.animals = animals.animals
+                self?.state.animals = animals.animals.filter({ animal in
+                    animal.photos.first != nil
+                })
+                
             }
             .store(in: &cancellables)
     }

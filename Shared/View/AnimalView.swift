@@ -10,6 +10,7 @@ import SwiftUI
 struct AnimalView: View {
     @ObservedObject var viewModel: AnimalsViewModel
     var animalId: Int
+    var gridItemLayout = [GridItem(.flexible()), GridItem(.flexible())]
     var body: some View {
         ScrollView{
             HStack {
@@ -55,9 +56,32 @@ struct AnimalView: View {
                 .padding()
             }
             .padding()
-            
+            HStack{
+                ContactView(phone: viewModel.state.animal?.contact.phone ?? "", email: viewModel.state.animal?.contact.email ?? "")
+                    .padding()
+                Spacer()
+            }
             Text(viewModel.state.animal?.description ?? "")
                 .padding()
+            
+            LazyVGrid(columns: gridItemLayout) {
+                ForEach(viewModel.state.animal?.photos ?? [], id: \.self) { photo in
+                    AsyncImage(url: URL(string: photo.full)) { image in
+                        image
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                    } placeholder: {
+                        Image(systemName: "photo")
+                            .imageScale(.large)
+                            .background(Color.gray)
+                            .frame(width: 140, height: 140)
+                    }
+                    .background(Color.gray)
+                    .clipShape(RoundedRectangle(cornerRadius: 15))
+                }
+            }
+            .padding()
+            .background(Color.secondary.opacity(0.2).edgesIgnoringSafeArea(.leading))
         }
         .onAppear{
             viewModel.fetchAnimal(id: animalId)
