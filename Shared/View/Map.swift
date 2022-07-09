@@ -13,7 +13,7 @@ struct MapView: View {
     @ObservedObject var viewModel: MapViewModel
     @State private var trackingMode = MapUserTrackingMode.follow
     @State private var region: MKCoordinateRegion = .init()
-    
+
     var body: some View {
 
             Map(

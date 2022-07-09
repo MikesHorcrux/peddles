@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct OrganizationInfoView: View {
-    
+
     var org: Organization?
     var location: AnnotationModel?
-    
+
     var body: some View {
-        VStack{
+        VStack {
             AsyncImage(url: URL(string: org?.photos?.first?.full ?? "")) { image in
                 image
                     .resizable()
@@ -28,7 +28,7 @@ struct OrganizationInfoView: View {
                 Circle().stroke(Color.secondary, lineWidth: 8)
             )
             .clipShape(Circle())
-            
+
             AddressView(org: org, location: location)
         }
     }

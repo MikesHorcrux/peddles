@@ -18,7 +18,7 @@ struct ContentView: View {
 
     var body: some View {
         NavigationView {
-            ZStack(alignment: .top){
+            ZStack(alignment: .top) {
                 MapView(location: location, viewModel: viewModel)
                     .edgesIgnoringSafeArea(.all)
                 Text("peddles")
@@ -26,15 +26,15 @@ struct ContentView: View {
                     .font(.title)
                     .fontWeight(.heavy)
                     .padding(.top, -35)
-                    
+
             }
-            .bottomSheet(isPresented: $showSheet, height: 800){
+            .bottomSheet(isPresented: $showSheet, height: 800) {
                 AdoptableAnimalsView(animalsViewModel: animalsVM)
             }
-            .navigationBarItems(trailing:  Button {
+            .navigationBarItems(trailing: Button {
                 showSheet.toggle()
             } label: {
-                ZStack{
+                ZStack {
                     Circle()
                         .frame(width: 65)
                         .foregroundColor(.secondary)

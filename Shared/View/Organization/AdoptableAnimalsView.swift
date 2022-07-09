@@ -29,8 +29,7 @@ struct AdoptableAnimalsView: View {
                                     color: animal.colors.primary ?? "",
                                     description: animal.description ?? "")
                             }
-                            
-                            
+
                         }
                     }
                 }
@@ -43,14 +42,14 @@ struct AdoptableAnimalsView: View {
                 .font(.title)
                 .frame(height: 400)
             }
-            
+
         }
     }
 }
 
 #if DEBUG
 struct AdoptableAnimalsView_Previews: PreviewProvider {
-    
+
     static var previews: some View {
         let viewModel = AnimalsViewModel(client: InMemoryAPIClient())
         AdoptableAnimalsView(animalsViewModel: viewModel)

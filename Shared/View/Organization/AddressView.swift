@@ -11,9 +11,9 @@ import MapKit
 struct AddressView: View {
     var org: Organization?
     var location: AnnotationModel?
-    
+
     var body: some View {
-        HStack(alignment: .top, spacing: 7){
+        HStack(alignment: .top, spacing: 7) {
             if let local = location {
                 Map(coordinateRegion: .constant(MKCoordinateRegion(center: local.latlong, latitudinalMeters: 400, longitudinalMeters: 400)), annotationItems: [local]) { item in
                     MapAnnotation(coordinate: item.latlong) {
@@ -32,7 +32,7 @@ struct AddressView: View {
                         .clipShape(Circle())
                         .frame(width: 30, height: 30)
                     }
-                    
+
                 }
                 .cornerRadius(15)
             }
@@ -60,16 +60,16 @@ struct AddressView: View {
         .frame(height: 200)
         .padding()
     }
-    
+
 }
 
 #if DEBUG
 struct AddressView_Previews: PreviewProvider {
-    
+
     static var previews: some View {
-        
+
         let address = PFAddress(address1: "1234 Somewhere pl", city: "Austin", state: "TX", postcode: "98747", country: "US")
-        
+
         VStack {
             AddressView(org: Organization.create(address: address))
             AddressView(org: Organization.create())

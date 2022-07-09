@@ -13,7 +13,7 @@ struct SingleAnimal: Codable {
 
 #if DEBUG
 extension SingleAnimal {
-    static func create(animal: Animal = .create()) -> Self{
+    static func create(animal: Animal = .create()) -> Self {
         Self(animal: animal)
     }
 }

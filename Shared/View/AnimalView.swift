@@ -12,10 +12,10 @@ struct AnimalView: View {
     var animalId: Int
     var gridItemLayout = [GridItem(.flexible()), GridItem(.flexible())]
     var body: some View {
-        ScrollView{
+        ScrollView {
             HStack {
                 animalImg
-                VStack(alignment: .leading){
+                VStack(alignment: .leading) {
                     HStack {
                         Text("name:")
                         Spacer()
@@ -56,14 +56,14 @@ struct AnimalView: View {
                 .padding()
             }
             .padding()
-            HStack{
+            HStack {
                 ContactView(phone: viewModel.state.animal?.contact.phone ?? "", email: viewModel.state.animal?.contact.email ?? "")
                     .padding()
                 Spacer()
             }
             Text(viewModel.state.animal?.description ?? "")
                 .padding()
-            
+
             LazyVGrid(columns: gridItemLayout) {
                 ForEach(viewModel.state.animal?.photos ?? [], id: \.self) { photo in
                     AsyncImage(url: URL(string: photo.full)) { image in
@@ -83,12 +83,12 @@ struct AnimalView: View {
             .padding()
             .background(Color.secondary.opacity(0.2).edgesIgnoringSafeArea(.leading))
         }
-        .onAppear{
+        .onAppear {
             viewModel.fetchAnimal(id: animalId)
         }
     }
-    
-    private var animalImg: some View{
+
+    private var animalImg: some View {
         AsyncImage(url: URL(string: viewModel.state.animal?.photos.first?.full ?? "")) { image in
             image
                 .resizable()
@@ -110,7 +110,7 @@ struct AnimalView_Previews: PreviewProvider {
     static var previews: some View {
         let viewModel = AnimalsViewModel(client: InMemoryAPIClient())
         AnimalView(viewModel: viewModel, animalId: 000)
-            .onAppear{
+            .onAppear {
                 viewModel.state.animal = .create()
             }
     }

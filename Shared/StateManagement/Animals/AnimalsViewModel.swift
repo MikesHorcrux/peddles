@@ -37,11 +37,11 @@ class AnimalsViewModel: ObservableObject {
                 self?.state.animals = animals.animals.filter({ animal in
                     animal.photos.first != nil
                 })
-                
+
             }
             .store(in: &cancellables)
     }
-    
+
     func fetchAnimal(id: Int) {
         client
             .dispatch(GetAnimal(id: id))
