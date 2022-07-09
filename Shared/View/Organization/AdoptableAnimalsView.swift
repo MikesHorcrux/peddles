@@ -17,13 +17,20 @@ struct AdoptableAnimalsView: View {
             if !animalsViewModel.state.animals.isEmpty {
                 ScrollView {
                     ForEach(animalsViewModel.state.animals) { animal in
-                        AnimalCard(
-                            img: animal.photos.first?.medium ?? "",
-                            name: animal.name ,
-                            breed: animal.breeds.primary ,
-                            animalType: animal.type ,
-                            color: animal.colors.primary ?? "",
-                            description: animal.description ?? "")
+                        if let animal = animal {
+                            NavigationLink {
+                                AnimalView(viewModel: animalsViewModel, animalId: animal.id)
+                            } label: {
+                                AnimalCard(
+                                    img: animal.photos.first?.medium ?? "",
+                                    name: animal.name ,
+                                    breed: animal.breeds.primary ,
+                                    animalType: animal.type ,
+                                    color: animal.colors.primary ?? "",
+                                    description: animal.description ?? "")
+                            }
+
+                        }
                     }
                 }
             } else {
@@ -35,14 +42,14 @@ struct AdoptableAnimalsView: View {
                 .font(.title)
                 .frame(height: 400)
             }
-            
+
         }
     }
 }
 
 #if DEBUG
 struct AdoptableAnimalsView_Previews: PreviewProvider {
-    
+
     static var previews: some View {
         let viewModel = AnimalsViewModel(client: InMemoryAPIClient())
         AdoptableAnimalsView(animalsViewModel: viewModel)

@@ -12,7 +12,7 @@ struct OrganizationView: View {
     @ObservedObject var orgViewModel: MapViewModel
     @State var org: Organization?
     var orgLocation: AnnotationModel?
-    
+
     var body: some View {
         ScrollView {
             OrganizationInfoView(org: org, location: orgLocation)

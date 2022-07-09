@@ -10,4 +10,5 @@ import Foundation
 struct AnimalState {
     var error: IdentifiableError?
     var animals: [Animal] = []
+    var animal: Animal?
 }

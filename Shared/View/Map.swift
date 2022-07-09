@@ -10,33 +10,29 @@ import MapKit
 
 struct MapView: View {
     @ObservedObject var location: LocationManager
-
     @ObservedObject var viewModel: MapViewModel
     @State private var trackingMode = MapUserTrackingMode.follow
     @State private var region: MKCoordinateRegion = .init()
+
     var body: some View {
 
-        Map(
-            coordinateRegion: $region,
-            interactionModes: .all,
-            showsUserLocation: true,
-            userTrackingMode: $trackingMode,
-            annotationItems: viewModel.state.organizationAnnotations
-        ) { item in
-            MapAnnotation(coordinate: item.latlong) {
-                NavigationLink(destination: {
-                    OrganizationView(orgViewModel: viewModel, orgLocation: item)
-                }, label: {
-                    annotationImage(img: item.img)
+            Map(
+                coordinateRegion: $region,
+                interactionModes: .all,
+                showsUserLocation: true,
+                userTrackingMode: $trackingMode,
+                annotationItems: viewModel.state.organizationAnnotations
+            ) { item in
+                MapAnnotation(coordinate: item.latlong) {
+                    NavigationLink(destination: {
+                        OrganizationView(orgViewModel: viewModel, orgLocation: item)
+                    }, label: {
+                        annotationImage(img: item.img)
 
-                })
-                .buttonStyle(.plain)
+                    })
+                    .buttonStyle(.plain)
+                }
             }
-        }
-        .onAppear {
-            region = location.currentRegion
-        }
-
     }
     private func annotationImage(img: String) -> some View {
         AsyncImage(url: URL(string: img)) { image in

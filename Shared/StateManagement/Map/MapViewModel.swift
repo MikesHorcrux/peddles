@@ -37,7 +37,7 @@ class MapViewModel: ObservableObject {
             }
             .store(in: &cancellables)
     }
-    
+
     func fetchOrganization(id: String) {
         client
             .dispatch(GetOrg(id: id))
@@ -53,7 +53,7 @@ class MapViewModel: ObservableObject {
             }
             .store(in: &cancellables)
     }
-    
+
     func fetchOrgsInArea(longLat: String) {
         client
             .dispatch(GetAllOrgs(queryParams:
@@ -83,7 +83,7 @@ class MapViewModel: ObservableObject {
                         continue
 
                     }
-                   
+
                 }
             }
             .store(in: &cancellables)

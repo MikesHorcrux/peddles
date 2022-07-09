@@ -14,7 +14,7 @@ struct AnimalCard: View {
     var animalType: String
     var color: String
     var description: String
-    
+
     init(img: String, name: String, breed: String, animalType: String, color: String, description: String) {
         self.img = img
         self.name = name
@@ -23,12 +23,12 @@ struct AnimalCard: View {
         self.color = color
         self.description = description
     }
-    
+
     var body: some View {
-        HStack{
+        HStack {
             animalImg
-            VStack(alignment: .leading, spacing: 10){
-                HStack(alignment: .top){
+            VStack(alignment: .leading, spacing: 10) {
+                HStack(alignment: .top) {
                     animalName
                     typeColor
                     animalColor
@@ -39,6 +39,8 @@ struct AnimalCard: View {
                     .lineLimit(3)
             }
         }
+        .multilineTextAlignment(.leading)
+        .foregroundColor(.primary)
         .padding()
         .background(Color("ColorCard"))
         .clipShape(
@@ -47,8 +49,8 @@ struct AnimalCard: View {
         .shadow(color: .black.opacity(0.5), radius: 3, x: -2, y: 2)
         .padding()
     }
-    
-    private var animalImg: some View{
+
+    private var animalImg: some View {
         AsyncImage(url: URL(string: img)) { image in
             image
                 .resizable()
@@ -63,8 +65,8 @@ struct AnimalCard: View {
         .frame(width: 130, height: 130)
         .clipShape(RoundedRectangle(cornerRadius: 10))
     }
-    
-    private var animalName: some View{
+
+    private var animalName: some View {
         VStack(alignment: .leading) {
             Text("name:")
                 .font(.caption)
@@ -73,9 +75,9 @@ struct AnimalCard: View {
                 .font(.caption2)
         }
     }
-    
-    private var typeColor: some View{
-        VStack(alignment: .leading){
+
+    private var typeColor: some View {
+        VStack(alignment: .leading) {
             Text("color:")
                 .font(.caption)
                 .foregroundColor(.secondary)
@@ -83,9 +85,9 @@ struct AnimalCard: View {
                 .font(.caption2)
         }
     }
-    
+
     private var animalColor: some View {
-        VStack(alignment: .leading){
+        VStack(alignment: .leading) {
             Text("type:")
                 .font(.caption)
                 .foregroundColor(.secondary)
@@ -93,7 +95,7 @@ struct AnimalCard: View {
                 .font(.caption2)
         }
     }
-    
+
 }
 
 #if DEBUG
