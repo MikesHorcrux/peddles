@@ -16,23 +16,33 @@ struct MapView: View {
 
     var body: some View {
 
-            Map(
-                coordinateRegion: $region,
-                interactionModes: .all,
-                showsUserLocation: true,
-                userTrackingMode: $trackingMode,
-                annotationItems: viewModel.state.organizationAnnotations
-            ) { item in
-                MapAnnotation(coordinate: item.latlong) {
-                    NavigationLink(destination: {
-                        OrganizationView(orgViewModel: viewModel, orgLocation: item)
-                    }, label: {
-                        annotationImage(img: item.img)
-
-                    })
-                    .buttonStyle(.plain)
-                }
+        ZStack {
+            ///
+            ///this is to fix the pop view bug intoduced in iOS 14
+            ///https://developer.apple.com/forums/thread/677333
+            ///
+            ///
+            NavigationLink(destination: EmptyView()) {
+                EmptyView()
             }
+            Map(
+                    coordinateRegion: $region,
+                    interactionModes: .all,
+                    showsUserLocation: true,
+                    userTrackingMode: $trackingMode,
+                    annotationItems: viewModel.state.organizationAnnotations
+                ) { item in
+                    MapAnnotation(coordinate: item.latlong) {
+                        NavigationLink(destination: {
+                            OrganizationView(orgViewModel: viewModel, orgLocation: item)
+                        }, label: {
+                            annotationImage(img: item.img)
+
+                        })
+                        .buttonStyle(.plain)
+                    }
+            }
+        }
     }
     private func annotationImage(img: String) -> some View {
         AsyncImage(url: URL(string: img)) { image in

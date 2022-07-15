@@ -31,14 +31,18 @@ struct ContentView: View {
             .bottomSheet(isPresented: $showSheet, height: 800) {
                 AdoptableAnimalsView(animalsViewModel: animalsVM)
             }
+            .navigationTitle("")
+            .navigationBarTitleDisplayMode(.inline)
             .navigationBarItems(trailing: Button {
                 showSheet.toggle()
             } label: {
                 ZStack {
-                    Circle()
-                        .frame(width: 65)
+                    Capsule()
+                        .frame(width: 105, height: 45)
                         .foregroundColor(.secondary)
-                    Text("🐶")
+                    Text("Find Pets 🐶")
+                        .foregroundColor(.primary)
+                    
                 }
             })
             // Todo: put this in the view model and use somthing beter than a timer

@@ -11,10 +11,6 @@
 		550CA2D728677F83004D555A /* GetTokenRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550CA2D628677F83004D555A /* GetTokenRequest.swift */; };
 		550CA2D928677FB5004D555A /* ClientSecrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550CA2D828677FB5004D555A /* ClientSecrets.swift */; };
 		550CA2DD28678063004D555A /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550CA2DC28678063004D555A /* AuthManager.swift */; };
-		550CA2DE286782A6004D555A /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550CA2DC28678063004D555A /* AuthManager.swift */; };
-		550CA2DF286782BA004D555A /* ClientSecrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550CA2D828677FB5004D555A /* ClientSecrets.swift */; };
-		550CA2E0286782BA004D555A /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550CA2D428677F63004D555A /* Token.swift */; };
-		550CA2E1286782BA004D555A /* GetTokenRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550CA2D628677F83004D555A /* GetTokenRequest.swift */; };
 		550CA2E528679863004D555A /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550CA2E428679863004D555A /* Animal.swift */; };
 		550CA2E728679922004D555A /* AnimalBreeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550CA2E628679922004D555A /* AnimalBreeds.swift */; };
 		550CA2E928679B38004D555A /* AnimalColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550CA2E828679B38004D555A /* AnimalColors.swift */; };
@@ -26,100 +22,48 @@
 		550CA2F52867ABDD004D555A /* Animals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550CA2F42867ABDD004D555A /* Animals.swift */; };
 		550CA2F82867ACBD004D555A /* GetAnimals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550CA2F72867ACBD004D555A /* GetAnimals.swift */; };
 		550CA2FB2867AD64004D555A /* AnimalsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550CA2FA2867AD64004D555A /* AnimalsViewModel.swift */; };
-		550CA2FC2867B9FE004D555A /* AnimalAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550CA2EC2867A2FA004D555A /* AnimalAttributes.swift */; };
-		550CA2FD2867B9FE004D555A /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550CA2EA28679C61004D555A /* Photos.swift */; };
-		550CA2FE2867B9FE004D555A /* Animals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550CA2F42867ABDD004D555A /* Animals.swift */; };
-		550CA2FF2867B9FE004D555A /* AnimalBreeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550CA2E628679922004D555A /* AnimalBreeds.swift */; };
-		550CA3002867B9FE004D555A /* AnimalEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550CA2EE2867A4C0004D555A /* AnimalEnvironment.swift */; };
-		550CA3012867B9FE004D555A /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550CA2E428679863004D555A /* Animal.swift */; };
-		550CA3022867B9FE004D555A /* PFAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550CA2F22867A644004D555A /* PFAddress.swift */; };
-		550CA3032867B9FE004D555A /* AnimalColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550CA2E828679B38004D555A /* AnimalColors.swift */; };
-		550CA3042867B9FE004D555A /* AnimalContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550CA2F02867A5F3004D555A /* AnimalContact.swift */; };
-		550CA3052867BA03004D555A /* GetAnimals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550CA2F72867ACBD004D555A /* GetAnimals.swift */; };
-		550CA3062867BA18004D555A /* AnimalsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550CA2FA2867AD64004D555A /* AnimalsViewModel.swift */; };
 		550CA3092867BB78004D555A /* Organization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550CA3082867BB78004D555A /* Organization.swift */; };
 		550CA30B2867BBEA004D555A /* OperationHours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550CA30A2867BBEA004D555A /* OperationHours.swift */; };
 		550CA30D2867BD57004D555A /* Policies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550CA30C2867BD57004D555A /* Policies.swift */; };
-		550CA30E2867BD57004D555A /* Policies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550CA30C2867BD57004D555A /* Policies.swift */; };
-		550CA30F2867BE8D004D555A /* OperationHours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550CA30A2867BBEA004D555A /* OperationHours.swift */; };
-		550CA3102867BE8D004D555A /* Organization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550CA3082867BB78004D555A /* Organization.swift */; };
 		550CA3122867BFC3004D555A /* Organizations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550CA3112867BFC3004D555A /* Organizations.swift */; };
-		550CA3132867BFC3004D555A /* Organizations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550CA3112867BFC3004D555A /* Organizations.swift */; };
 		550CA3152867C0EA004D555A /* GetAllOrgs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550CA3142867C0EA004D555A /* GetAllOrgs.swift */; };
-		550CA3162867C0EA004D555A /* GetAllOrgs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550CA3142867C0EA004D555A /* GetAllOrgs.swift */; };
 		550CA3192867C1D7004D555A /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550CA3182867C1D7004D555A /* MapViewModel.swift */; };
-		550CA31A2867C1D7004D555A /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550CA3182867C1D7004D555A /* MapViewModel.swift */; };
 		550CA31C2867C2B3004D555A /* MapState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550CA31B2867C2B3004D555A /* MapState.swift */; };
-		550CA31D2867C2B3004D555A /* MapState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550CA31B2867C2B3004D555A /* MapState.swift */; };
 		550CA3222867DF35004D555A /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550CA3212867DF35004D555A /* LocationManager.swift */; };
 		550CA3272867F98B004D555A /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550CA3262867F98B004D555A /* Map.swift */; };
 		551B4D4928778E530095B5ED /* AnimalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551B4D4828778E530095B5ED /* AnimalView.swift */; };
-		551B4D4A28778E530095B5ED /* AnimalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551B4D4828778E530095B5ED /* AnimalView.swift */; };
 		551B4D4C2878B3FB0095B5ED /* SingleAnimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551B4D4B2878B3FB0095B5ED /* SingleAnimal.swift */; };
-		551B4D4D2878B3FB0095B5ED /* SingleAnimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551B4D4B2878B3FB0095B5ED /* SingleAnimal.swift */; };
 		551B4D4F2878B60A0095B5ED /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551B4D4E2878B60A0095B5ED /* File.swift */; };
-		551B4D502878B60A0095B5ED /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551B4D4E2878B60A0095B5ED /* File.swift */; };
 		551B4D522878B62C0095B5ED /* GetAnimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551B4D512878B62C0095B5ED /* GetAnimal.swift */; };
-		551B4D532878B62C0095B5ED /* GetAnimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551B4D512878B62C0095B5ED /* GetAnimal.swift */; };
 		5535CCC62879FA6700CFC1FB /* BottomSheet in Frameworks */ = {isa = PBXBuildFile; productRef = 5535CCC52879FA6700CFC1FB /* BottomSheet */; };
 		558F5E5C28655EA000365B05 /* peddlesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558F5E4C28655EA000365B05 /* peddlesApp.swift */; };
-		558F5E5D28655EA000365B05 /* peddlesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558F5E4C28655EA000365B05 /* peddlesApp.swift */; };
 		558F5E5E28655EA000365B05 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558F5E4D28655EA000365B05 /* ContentView.swift */; };
-		558F5E5F28655EA000365B05 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558F5E4D28655EA000365B05 /* ContentView.swift */; };
 		558F5E6028655EA000365B05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 558F5E4E28655EA000365B05 /* Assets.xcassets */; };
-		558F5E6128655EA000365B05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 558F5E4E28655EA000365B05 /* Assets.xcassets */; };
 		558F5E72286564E400365B05 /* NetworkDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558F5E6A286564E300365B05 /* NetworkDispatcher.swift */; };
-		558F5E73286564E400365B05 /* NetworkDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558F5E6A286564E300365B05 /* NetworkDispatcher.swift */; };
 		558F5E74286564E400365B05 /* RequestPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558F5E6B286564E300365B05 /* RequestPublisher.swift */; };
-		558F5E75286564E400365B05 /* RequestPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558F5E6B286564E300365B05 /* RequestPublisher.swift */; };
 		558F5E76286564E400365B05 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558F5E6C286564E300365B05 /* APIClient.swift */; };
-		558F5E77286564E400365B05 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558F5E6C286564E300365B05 /* APIClient.swift */; };
 		558F5E78286564E400365B05 /* NetworkingLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558F5E6D286564E300365B05 /* NetworkingLogger.swift */; };
-		558F5E79286564E400365B05 /* NetworkingLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558F5E6D286564E300365B05 /* NetworkingLogger.swift */; };
 		558F5E7A286564E400365B05 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558F5E6E286564E400365B05 /* Request.swift */; };
-		558F5E7B286564E400365B05 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558F5E6E286564E400365B05 /* Request.swift */; };
 		558F5E7C286564E400365B05 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558F5E6F286564E400365B05 /* JSON.swift */; };
-		558F5E7D286564E400365B05 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558F5E6F286564E400365B05 /* JSON.swift */; };
 		558F5E7E286564E400365B05 /* EnvironmentValues+APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558F5E70286564E400365B05 /* EnvironmentValues+APIClient.swift */; };
-		558F5E7F286564E400365B05 /* EnvironmentValues+APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558F5E70286564E400365B05 /* EnvironmentValues+APIClient.swift */; };
 		558F5E80286564E400365B05 /* NetworkRequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558F5E71286564E400365B05 /* NetworkRequestError.swift */; };
-		558F5E81286564E400365B05 /* NetworkRequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558F5E71286564E400365B05 /* NetworkRequestError.swift */; };
 		558F5E8A2865660C00365B05 /* error+extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558F5E842865660C00365B05 /* error+extention.swift */; };
-		558F5E8B2865660C00365B05 /* error+extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558F5E842865660C00365B05 /* error+extention.swift */; };
 		558F5E8C2865660C00365B05 /* URL+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558F5E852865660C00365B05 /* URL+extension.swift */; };
-		558F5E8D2865660C00365B05 /* URL+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558F5E852865660C00365B05 /* URL+extension.swift */; };
 		558F5E8E2865660C00365B05 /* Dictionary+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558F5E862865660C00365B05 /* Dictionary+extension.swift */; };
-		558F5E8F2865660C00365B05 /* Dictionary+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558F5E862865660C00365B05 /* Dictionary+extension.swift */; };
 		558F5E902865660C00365B05 /* Date+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558F5E872865660C00365B05 /* Date+extension.swift */; };
-		558F5E912865660C00365B05 /* Date+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558F5E872865660C00365B05 /* Date+extension.swift */; };
 		558F5E922865660C00365B05 /* URLRequest+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558F5E882865660C00365B05 /* URLRequest+extension.swift */; };
-		558F5E932865660C00365B05 /* URLRequest+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558F5E882865660C00365B05 /* URLRequest+extension.swift */; };
 		558F5E942865660C00365B05 /* Array+extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558F5E892865660C00365B05 /* Array+extention.swift */; };
-		558F5E952865660C00365B05 /* Array+extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558F5E892865660C00365B05 /* Array+extention.swift */; };
-		559133A32867FAF4006D7750 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550CA3262867F98B004D555A /* Map.swift */; };
-		559133A42867FAFE006D7750 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550CA3212867DF35004D555A /* LocationManager.swift */; };
 		559133A728681E7F006D7750 /* AnnotationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559133A628681E7F006D7750 /* AnnotationModel.swift */; };
-		559133A828681FDE006D7750 /* AnnotationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559133A628681E7F006D7750 /* AnnotationModel.swift */; };
 		559133AA28692B6A006D7750 /* AnimalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559133A928692B6A006D7750 /* AnimalState.swift */; };
-		559133AB28692B6A006D7750 /* AnimalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559133A928692B6A006D7750 /* AnimalState.swift */; };
 		559133AE28692CA2006D7750 /* OrganizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559133AD28692CA2006D7750 /* OrganizationView.swift */; };
-		559133AF28692CA2006D7750 /* OrganizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559133AD28692CA2006D7750 /* OrganizationView.swift */; };
 		559133B828692E19006D7750 /* GetOrg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559133B728692E19006D7750 /* GetOrg.swift */; };
-		559133B928692E19006D7750 /* GetOrg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559133B728692E19006D7750 /* GetOrg.swift */; };
 		5591D506286A858600FDA214 /* ContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5591D505286A858600FDA214 /* ContactView.swift */; };
-		5591D507286A858600FDA214 /* ContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5591D505286A858600FDA214 /* ContactView.swift */; };
 		5598F3A6286A3418006719B7 /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5598F3A5286A3418006719B7 /* AddressView.swift */; };
-		5598F3A7286A3418006719B7 /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5598F3A5286A3418006719B7 /* AddressView.swift */; };
 		55D686C6286E0D4F003C0C3C /* OrganizationInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D686C5286E0D4F003C0C3C /* OrganizationInfoView.swift */; };
-		55D686C7286E0D4F003C0C3C /* OrganizationInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D686C5286E0D4F003C0C3C /* OrganizationInfoView.swift */; };
 		55D686C9286E2639003C0C3C /* AnimalCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D686C8286E2639003C0C3C /* AnimalCard.swift */; };
-		55D686CA286E2639003C0C3C /* AnimalCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D686C8286E2639003C0C3C /* AnimalCard.swift */; };
 		55EBC0F728693DBF00859AEF /* SingleOrganization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EBC0F628693DBF00859AEF /* SingleOrganization.swift */; };
-		55EBC0F828693DBF00859AEF /* SingleOrganization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EBC0F628693DBF00859AEF /* SingleOrganization.swift */; };
 		55EBC0FD286A100D00859AEF /* AdoptableAnimalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EBC0FC286A100D00859AEF /* AdoptableAnimalsView.swift */; };
-		55EBC0FE286A100D00859AEF /* AdoptableAnimalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EBC0FC286A100D00859AEF /* AdoptableAnimalsView.swift */; };
 		55EBC100286A172A00859AEF /* AnimalPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EBC0FF286A172A00859AEF /* AnimalPhoto.swift */; };
-		55EBC101286A172A00859AEF /* AnimalPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EBC0FF286A172A00859AEF /* AnimalPhoto.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -156,7 +100,6 @@
 		558F5E4D28655EA000365B05 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		558F5E4E28655EA000365B05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		558F5E5328655EA000365B05 /* peddles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = peddles.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		558F5E5928655EA000365B05 /* peddles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = peddles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		558F5E5B28655EA000365B05 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		558F5E6A286564E300365B05 /* NetworkDispatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkDispatcher.swift; sourceTree = "<group>"; };
 		558F5E6B286564E300365B05 /* RequestPublisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestPublisher.swift; sourceTree = "<group>"; };
@@ -191,13 +134,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5535CCC62879FA6700CFC1FB /* BottomSheet in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		558F5E5628655EA000365B05 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,7 +280,6 @@
 			isa = PBXGroup;
 			children = (
 				558F5E5328655EA000365B05 /* peddles.app */,
-				558F5E5928655EA000365B05 /* peddles.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -430,23 +365,6 @@
 			productReference = 558F5E5328655EA000365B05 /* peddles.app */;
 			productType = "com.apple.product-type.application";
 		};
-		558F5E5828655EA000365B05 /* peddles (macOS) */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 558F5E6728655EA000365B05 /* Build configuration list for PBXNativeTarget "peddles (macOS)" */;
-			buildPhases = (
-				558F5E5528655EA000365B05 /* Sources */,
-				558F5E5628655EA000365B05 /* Frameworks */,
-				558F5E5728655EA000365B05 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "peddles (macOS)";
-			productName = "peddles (macOS)";
-			productReference = 558F5E5928655EA000365B05 /* peddles.app */;
-			productType = "com.apple.product-type.application";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -458,9 +376,6 @@
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
 					558F5E5228655EA000365B05 = {
-						CreatedOnToolsVersion = 13.3.1;
-					};
-					558F5E5828655EA000365B05 = {
 						CreatedOnToolsVersion = 13.3.1;
 					};
 				};
@@ -482,7 +397,6 @@
 			projectRoot = "";
 			targets = (
 				558F5E5228655EA000365B05 /* peddles (iOS) */,
-				558F5E5828655EA000365B05 /* peddles (macOS) */,
 			);
 		};
 /* End PBXProject section */
@@ -493,14 +407,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				558F5E6028655EA000365B05 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		558F5E5728655EA000365B05 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				558F5E6128655EA000365B05 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -590,68 +496,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		558F5E5528655EA000365B05 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				551B4D532878B62C0095B5ED /* GetAnimal.swift in Sources */,
-				550CA3102867BE8D004D555A /* Organization.swift in Sources */,
-				550CA2DF286782BA004D555A /* ClientSecrets.swift in Sources */,
-				550CA30E2867BD57004D555A /* Policies.swift in Sources */,
-				550CA3162867C0EA004D555A /* GetAllOrgs.swift in Sources */,
-				558F5E8B2865660C00365B05 /* error+extention.swift in Sources */,
-				559133B928692E19006D7750 /* GetOrg.swift in Sources */,
-				558F5E7D286564E400365B05 /* JSON.swift in Sources */,
-				559133AF28692CA2006D7750 /* OrganizationView.swift in Sources */,
-				550CA3012867B9FE004D555A /* Animal.swift in Sources */,
-				558F5E75286564E400365B05 /* RequestPublisher.swift in Sources */,
-				550CA2FF2867B9FE004D555A /* AnimalBreeds.swift in Sources */,
-				55D686CA286E2639003C0C3C /* AnimalCard.swift in Sources */,
-				550CA2FD2867B9FE004D555A /* Photos.swift in Sources */,
-				550CA3132867BFC3004D555A /* Organizations.swift in Sources */,
-				558F5E73286564E400365B05 /* NetworkDispatcher.swift in Sources */,
-				5598F3A7286A3418006719B7 /* AddressView.swift in Sources */,
-				559133A42867FAFE006D7750 /* LocationManager.swift in Sources */,
-				558F5E932865660C00365B05 /* URLRequest+extension.swift in Sources */,
-				558F5E5F28655EA000365B05 /* ContentView.swift in Sources */,
-				550CA2FC2867B9FE004D555A /* AnimalAttributes.swift in Sources */,
-				558F5E77286564E400365B05 /* APIClient.swift in Sources */,
-				550CA31D2867C2B3004D555A /* MapState.swift in Sources */,
-				550CA2DE286782A6004D555A /* AuthManager.swift in Sources */,
-				55EBC0F828693DBF00859AEF /* SingleOrganization.swift in Sources */,
-				551B4D4A28778E530095B5ED /* AnimalView.swift in Sources */,
-				550CA3042867B9FE004D555A /* AnimalContact.swift in Sources */,
-				550CA3062867BA18004D555A /* AnimalsViewModel.swift in Sources */,
-				550CA31A2867C1D7004D555A /* MapViewModel.swift in Sources */,
-				550CA3032867B9FE004D555A /* AnimalColors.swift in Sources */,
-				558F5E7B286564E400365B05 /* Request.swift in Sources */,
-				55EBC0FE286A100D00859AEF /* AdoptableAnimalsView.swift in Sources */,
-				558F5E952865660C00365B05 /* Array+extention.swift in Sources */,
-				551B4D4D2878B3FB0095B5ED /* SingleAnimal.swift in Sources */,
-				55D686C7286E0D4F003C0C3C /* OrganizationInfoView.swift in Sources */,
-				558F5E7F286564E400365B05 /* EnvironmentValues+APIClient.swift in Sources */,
-				550CA2FE2867B9FE004D555A /* Animals.swift in Sources */,
-				559133A828681FDE006D7750 /* AnnotationModel.swift in Sources */,
-				558F5E8F2865660C00365B05 /* Dictionary+extension.swift in Sources */,
-				558F5E5D28655EA000365B05 /* peddlesApp.swift in Sources */,
-				559133A32867FAF4006D7750 /* Map.swift in Sources */,
-				559133AB28692B6A006D7750 /* AnimalState.swift in Sources */,
-				558F5E8D2865660C00365B05 /* URL+extension.swift in Sources */,
-				550CA3052867BA03004D555A /* GetAnimals.swift in Sources */,
-				551B4D502878B60A0095B5ED /* File.swift in Sources */,
-				550CA3022867B9FE004D555A /* PFAddress.swift in Sources */,
-				5591D507286A858600FDA214 /* ContactView.swift in Sources */,
-				550CA2E0286782BA004D555A /* Token.swift in Sources */,
-				558F5E79286564E400365B05 /* NetworkingLogger.swift in Sources */,
-				558F5E81286564E400365B05 /* NetworkRequestError.swift in Sources */,
-				550CA30F2867BE8D004D555A /* OperationHours.swift in Sources */,
-				550CA2E1286782BA004D555A /* GetTokenRequest.swift in Sources */,
-				558F5E912865660C00365B05 /* Date+extension.swift in Sources */,
-				55EBC101286A172A00859AEF /* AnimalPhoto.swift in Sources */,
-				550CA3002867B9FE004D555A /* AnimalEnvironment.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
@@ -705,7 +549,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -759,7 +603,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -784,9 +628,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -817,9 +660,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -832,62 +674,6 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		558F5E6828655EA000365B05 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 10;
-				DEVELOPMENT_TEAM = 5V5PZUN2HG;
-				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 12.3;
-				MARKETING_VERSION = 1.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.justbearded.peddles;
-				PRODUCT_NAME = peddles;
-				SDKROOT = macosx;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		558F5E6928655EA000365B05 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 10;
-				DEVELOPMENT_TEAM = 5V5PZUN2HG;
-				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 12.3;
-				MARKETING_VERSION = 1.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.justbearded.peddles;
-				PRODUCT_NAME = peddles;
-				SDKROOT = macosx;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -908,15 +694,6 @@
 			buildConfigurations = (
 				558F5E6528655EA000365B05 /* Debug */,
 				558F5E6628655EA000365B05 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		558F5E6728655EA000365B05 /* Build configuration list for PBXNativeTarget "peddles (macOS)" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				558F5E6828655EA000365B05 /* Debug */,
-				558F5E6928655EA000365B05 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
